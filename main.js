@@ -14,15 +14,16 @@ function applyContactConfig() {
   $$('[data-phone-display]').forEach((item) => { item.textContent = siteConfig.phoneDisplay; });
   $$('[data-email-link]').forEach((link) => { link.href = `mailto:${siteConfig.email}`; });
   $$('[data-email-display]').forEach((item) => { item.textContent = siteConfig.email; });
-  $('[data-city-office]').textContent = siteConfig.cityOffice;
-  $('[data-branch-office]').textContent = siteConfig.branchOffice;
+  if ($('[data-city-office]')) $('[data-city-office]').textContent = siteConfig.cityOffice;
+  if ($('[data-branch-office]')) $('[data-branch-office]').textContent = siteConfig.branchOffice;
   $$('[data-whatsapp]').forEach((link) => { link.href = whatsappUrl(); });
-  $('[data-map-link]').href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(siteConfig.mapQuery)}`;
-  $('[data-map-frame]').src = `https://maps.google.com/maps?q=${encodeURIComponent(siteConfig.mapQuery)}&t=m&z=12&output=embed&iwloc=near`;
+  if ($('[data-map-link]')) $('[data-map-link]').href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(siteConfig.mapQuery)}`;
+  if ($('[data-map-frame]')) $('[data-map-frame]').src = `https://maps.google.com/maps?q=${encodeURIComponent(siteConfig.mapQuery)}&t=m&z=12&output=embed&iwloc=near`;
 }
 
 function setupVideo() {
   const video = $('#hero-video');
+  if (!video) return;
   const source = video.querySelector('source');
   const update = () => {
     document.documentElement.classList.toggle('motion-reduced', lessMotion());
@@ -62,6 +63,7 @@ function setupMenu() {
 
 function setupCatalog() {
   const input = $('#course-search');
+  if (!input) return;
   const clear = $('#clear-search');
   const courses = $$('.course');
   const filters = $$('.filter');
@@ -104,20 +106,24 @@ function setupCatalog() {
 
 function setupEnquiry() {
   const form = $('#enquiry-form');
+  if (!form) return;
   const status = $('#form-status');
   const readyLink = $('#whatsapp-ready-link');
   const fields = ['name', 'phone', 'email', 'course', 'message'];
   const started = $('#enquiry-started');
   started.value = String(Date.now());
+  const requestedCourse = new URL(window.location.href).searchParams.get('course');
+  if (requestedCourse && [...form.elements.course.options].some((option) => option.value === requestedCourse)) {
+    form.elements.course.value = requestedCourse;
+  }
   const resetPrepared = () => {
     readyLink.hidden = true;
-    readyLink.href = '#contact';
+    readyLink.href = '#enquiry-form';
     status.className = 'form-status';
     status.textContent = '';
   };
   fields.forEach((name) => form.elements[name].addEventListener('input', resetPrepared));
   form.elements.course.addEventListener('change', resetPrepared);
-  $$('[data-course]').forEach((link) => link.addEventListener('click', () => { form.elements.course.value = link.dataset.course; resetPrepared(); }));
   const setError = (name, message) => {
     const field = form.elements[name];
     field.setAttribute('aria-invalid', message ? 'true' : 'false');

@@ -6,17 +6,21 @@ Audited `https://ikonsol.co.in/` on 18 October 2026 using its rendered page, HTM
 
 | Reference | Findings | New site |
 | --- | --- | --- |
-| Top strip/header | Phone `+91 8981729353`; IKONSOL logo; Home, About Us, Our Courses, Contact Us. Mobile menu includes the same four items and a site search. | Same core navigation with working section anchors; mobile menu; course-specific search in catalog. |
+| Top strip/header | Phone `+91 8981729353`; IKONSOL logo; Home, About Us, Our Courses, Contact Us. Mobile menu includes the same four items and a site search. | The four items lead to distinct Home, About, Courses and Contact pages; mobile menu; course-specific search on Courses. |
 | Hero | Student image background, “IKONSOL COLLEGE OF EDUCATION” headline, Contact Us button to `https://wa.link/zygeav`. | Supplied classroom video, matching video poster/static fallback, courses and contact calls to action. |
-| Our Top Courses | Engineering, Management, Paramedical, Agriculture, each with the same presentation icon. | Four illustrated cards linking to the corresponding catalog sections. |
+| Our Top Courses | Engineering, Management, Paramedical, Agriculture, each with the same presentation icon. | Four illustrated cards linking to dedicated course-area pages. |
 | About Us | Mission statement about inclusive education, teacher training, higher learning/research and a knowledge society; Contact Us goes to the WhatsApp short link. | Edited for readability while keeping those claims and the IKONSOL identity. |
-| Course accordion | General, Engineering, Management, Agriculture, Paramedical, Computer Application and Law categories with the program lists below. | Searchable, filterable, keyboard-accessible `<details>` entries with every listed program. |
-| Certificate Course | Eight listed certificate courses. | Dedicated catalog entry. |
+| Course accordion | General, Engineering, Management, Agriculture, Paramedical, Computer Application and Law categories with the program lists below. | Searchable, filterable, keyboard-accessible `<details>` entries with every listed program on Courses, plus a detail page for each area. |
+| Certificate Course | Eight listed certificate courses. | Dedicated catalog entry and detail page. |
 | “Council Members” | A heading, but no names or member information; below it are six feature cards: Engineering Courses, Hotel Management, Agricultural Courses, Paramedical Courses, Law Courses, Computer Application Courses. Each Contact Us button uses the same WhatsApp link. | Six areas remain discoverable in the catalog/contact flow. No council members were invented. Hotel Management is enquiry-only because no program list is supplied. |
 | “Find your district” | Embedded Google map for the city office; city and branch addresses, email and phone/fax. | City-office map, map link, both addresses, email and call/WhatsApp links plus enquiry form. |
 | Footer | Short About text, four quick links, address/phone/email, copyright. | IKONSOL information and navigation, with required “Designed by CloudEmpire” footer link. |
 
 The reference has no enquiry form. The new form is an added feature that prepares a WhatsApp message for the verified number; the visitor sends it in WhatsApp. The reference has no verified statistics, so animated counters were intentionally omitted.
+
+## Page inventory
+
+The redesign has 13 static routes: Home (`/`), About (`/about.html`), Courses (`/courses.html`), Contact (`/contact.html`), and nine pages under `/courses/` for General courses, Engineering, Management, Agriculture, Paramedical, Computer applications, Law, Certificate courses, and Hotel management. The catalog retains all verified listings and links to those pages. Course enquiry links open Contact with the relevant area selected.
 
 ## Course inventory
 
