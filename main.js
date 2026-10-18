@@ -1,4 +1,5 @@
 import { siteConfig } from './site-config.mjs';
+import { whatsappUrl, enquiryWhatsappUrl } from './whatsapp.mjs';
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
@@ -7,13 +8,6 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const motionOverride = new URL(window.location.href).searchParams.get('motion') === 'reduce';
 const lessMotion = () => reduceMotion.matches || motionOverride;
 document.documentElement.classList.toggle('motion-reduced', lessMotion());
-
-function whatsappUrl(course = '') {
-  const message = course
-    ? `Hello IKONSOL, I am interested in ${course}. Please share the course details and how to enquire.`
-    : 'Hello IKONSOL, I would like to know more about your courses. Please contact me.';
-  return `https://wa.me/${siteConfig.whatsappE164}?text=${encodeURIComponent(message)}`;
-}
 
 function applyContactConfig() {
   $$('[data-phone-link]').forEach((link) => { link.href = `tel:+${siteConfig.phoneE164}`; });
@@ -111,11 +105,19 @@ function setupCatalog() {
 function setupEnquiry() {
   const form = $('#enquiry-form');
   const status = $('#form-status');
-  const submit = form.querySelector('button[type=submit]');
+  const readyLink = $('#whatsapp-ready-link');
   const fields = ['name', 'phone', 'email', 'course', 'message'];
   const started = $('#enquiry-started');
   started.value = String(Date.now());
-  $$('[data-course]').forEach((link) => link.addEventListener('click', () => { form.elements.course.value = link.dataset.course; }));
+  const resetPrepared = () => {
+    readyLink.hidden = true;
+    readyLink.href = '#contact';
+    status.className = 'form-status';
+    status.textContent = '';
+  };
+  fields.forEach((name) => form.elements[name].addEventListener('input', resetPrepared));
+  form.elements.course.addEventListener('change', resetPrepared);
+  $$('[data-course]').forEach((link) => link.addEventListener('click', () => { form.elements.course.value = link.dataset.course; resetPrepared(); }));
   const setError = (name, message) => {
     const field = form.elements[name];
     field.setAttribute('aria-invalid', message ? 'true' : 'false');
@@ -135,29 +137,22 @@ function setupEnquiry() {
     if (Object.keys(errors).length) form.elements[Object.keys(errors)[0]].focus();
     return Object.keys(errors).length ? null : data;
   };
-  form.addEventListener('submit', async (event) => {
+  form.addEventListener('submit', (event) => {
     event.preventDefault();
-    status.className = 'form-status';
-    status.textContent = '';
+    resetPrepared();
     const data = validate();
     if (!data) return;
-    submit.disabled = true;
-    submit.firstChild.textContent = 'Sending… ';
-    try {
-      const response = await fetch(siteConfig.formEndpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
-      const result = await response.json().catch(() => ({ ok: false, message: 'Online enquiries are temporarily unavailable.' }));
-      if (!response.ok || !result.ok) throw new Error(result.message || 'The enquiry could not be sent.');
-      status.classList.add('is-success');
-      status.textContent = 'Thank you. Your enquiry has been sent to IKONSOL.';
-      form.reset();
-      started.value = String(Date.now());
-    } catch (error) {
+    const elapsed = Date.now() - Number(data.startedAt);
+    if (data.website || !Number.isFinite(elapsed) || elapsed < 2000) {
       status.classList.add('is-error');
-      status.textContent = `${error.message} You can also call or WhatsApp us.`;
-    } finally {
-      submit.disabled = false;
-      submit.firstChild.textContent = 'Send enquiry ';
+      status.textContent = 'Please wait a moment, then try again.';
+      return;
     }
+    readyLink.href = enquiryWhatsappUrl(data);
+    readyLink.hidden = false;
+    status.classList.add('is-success');
+    status.textContent = 'Your enquiry is ready. Review it in WhatsApp and tap Send there.';
+    readyLink.click();
   });
 }
 
@@ -179,5 +174,3 @@ setupCatalog();
 setupEnquiry();
 setupReveal();
 $('#year').textContent = String(new Date().getFullYear());
-
-export { whatsappUrl };

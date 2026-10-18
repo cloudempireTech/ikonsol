@@ -16,7 +16,7 @@ Audited `https://ikonsol.co.in/` on 18 October 2026 using its rendered page, HTM
 | “Find your district” | Embedded Google map for the city office; city and branch addresses, email and phone/fax. | City-office map, map link, both addresses, email and call/WhatsApp links plus enquiry form. |
 | Footer | Short About text, four quick links, address/phone/email, copyright. | IKONSOL information and navigation, with required “Designed by CloudEmpire” footer link. |
 
-The reference has no enquiry form. The new form is an added feature. The reference has no verified statistics, so animated counters were intentionally omitted.
+The reference has no enquiry form. The new form is an added feature that prepares a WhatsApp message for the verified number; the visitor sends it in WhatsApp. The reference has no verified statistics, so animated counters were intentionally omitted.
 
 ## Course inventory
 
