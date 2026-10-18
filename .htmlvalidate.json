@@ -1,0 +1,10 @@
+{
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "heading-level": "off",
+    "prefer-native-element": "off",
+    "wcag/h32": "off",
+    "no-autoplay": "off",
+    "tel-non-breaking": "off"
+  }
+}
