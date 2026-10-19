@@ -1,6 +1,20 @@
 # Test results — 18–19 October 2026
 
-## Course page redesign — 19 October 2026
+## Individual course catalog — 19 October 2026
+
+| Check | Result |
+| --- | --- |
+| Catalog completeness | Pass: all 80 named reference entries appear directly on `/courses.html` in nine category sections. Each has a unique generated WebP asset, verified by file hash. Management specializations retain their label. Hotel management remains an enquiry area without an invented program. |
+| Desktop visual review | Pass at 1440 px: Engineering shows 18 image cards in a three-column grid with responsive image proportions and no horizontal overflow. |
+| Mobile visual review | Pass at 390 px: one-column cards, scrollable category filters, visible search and no page-level horizontal overflow. The mobile menu opens with all five links. |
+| Search and filters | Pass in browser: Engineering shows 18 entries; `Cyber Security` narrows it to one; an unmatched query shows the empty state; Clear restores 80; Hotel management shows its enquiry panel. |
+| Course enquiry | Pass in browser: Cyber Security opens Contact with Engineering selected and the course named in the message. Empty submission shows name and reply-method errors. |
+| Assets and console | Pass: first visible generated cards load at natural width 960; no broken images or console errors in the fresh checked page. Static route tests verify every asset path. |
+| Automated checks | `npm run lint`, `npm test` (6 tests), and `npm run build` pass. |
+
+The image files in `assets/course-images/` are web-optimized illustrative scenes. They are not photographs of IKONSOL facilities. The source content and exact asset mapping are documented in `reference-inventory.md`, `generated-course-images.md`, and `data/course-catalog.json`.
+
+## Earlier course page redesign — 19 October 2026
 
 | Check | Result |
 | --- | --- |

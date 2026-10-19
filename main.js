@@ -66,21 +66,32 @@ function setupCatalog() {
   const input = $('#course-search');
   if (!input) return;
   const clear = $('#clear-search');
-  const courses = $$('.course');
+  const sections = $$('.catalog-section');
   const filters = $$('.filter');
   let active = 'all';
   const render = () => {
     const query = input.value.trim().toLocaleLowerCase();
     let count = 0;
-    courses.forEach((course) => {
-      const groupMatch = active === 'all' || course.dataset.group === active;
-      const queryMatch = !query || course.dataset.search.toLocaleLowerCase().includes(query);
-      const visible = groupMatch && queryMatch;
-      course.hidden = !visible;
-      if (visible) count++;
+    let hotelVisible = false;
+    sections.forEach((section) => {
+      const groupMatch = active === 'all' || section.dataset.group === active;
+      const cards = [...section.querySelectorAll('.detail-course')];
+      if (!cards.length) {
+        hotelVisible = groupMatch && (!query || section.textContent.toLocaleLowerCase().includes(query));
+        section.hidden = !hotelVisible;
+        return;
+      }
+      let sectionCount = 0;
+      cards.forEach((card) => {
+        const visible = groupMatch && (!query || card.dataset.search.toLocaleLowerCase().includes(query));
+        card.hidden = !visible;
+        if (visible) sectionCount++;
+      });
+      section.hidden = sectionCount === 0;
+      count += sectionCount;
     });
-    $('#result-count').textContent = `${count} course ${count === 1 ? 'area' : 'areas'} shown`;
-    $('#no-results').hidden = count !== 0;
+    $('#result-count').textContent = `${count} listed ${count === 1 ? 'option' : 'options'} shown${hotelVisible ? ' · Hotel management enquiries available' : ''}`;
+    $('#no-results').hidden = count !== 0 || hotelVisible;
     clear.hidden = !query;
   };
   input.addEventListener('input', render);
@@ -104,6 +115,10 @@ function setupEnquiry() {
   const requestedCourse = new URL(window.location.href).searchParams.get('course');
   if (requestedCourse && [...form.elements.course.options].some((option) => option.value === requestedCourse)) {
     form.elements.course.value = requestedCourse;
+  }
+  const requestedSubject = new URL(window.location.href).searchParams.get('subject');
+  if (requestedSubject && requestedSubject.length <= 140 && !form.elements.message.value) {
+    form.elements.message.value = `I would like to enquire about ${requestedSubject}. Please share the current details.`;
   }
   const resetPrepared = () => {
     readyLink.hidden = true;

@@ -1,0 +1,458 @@
+[
+  {
+    "key": "general",
+    "title": "General courses",
+    "page": "courses/general-courses.html",
+    "entries": [
+      {
+        "name": "Bachelor of Arts (B.A.)",
+        "level": "Regular & distance mode",
+        "image": "assets/course-images/general-01-bachelor-of-arts-b-a.webp"
+      },
+      {
+        "name": "Bachelor of Science (B.Sc.)",
+        "level": "Regular & distance mode",
+        "image": "assets/course-images/general-02-bachelor-of-science-b-sc.webp"
+      },
+      {
+        "name": "Bachelor of Commerce (B.Com.)",
+        "level": "Regular & distance mode",
+        "image": "assets/course-images/general-03-bachelor-of-commerce-b-com.webp"
+      },
+      {
+        "name": "Master of Arts (M.A.)",
+        "level": "Regular & distance mode",
+        "image": "assets/course-images/general-04-master-of-arts-m-a.webp"
+      },
+      {
+        "name": "Master of Science (M.Sc.)",
+        "level": "Regular & distance mode",
+        "image": "assets/course-images/general-05-master-of-science-m-sc.webp"
+      },
+      {
+        "name": "Master of Commerce (M.Com.)",
+        "level": "Regular & distance mode",
+        "image": "assets/course-images/general-06-master-of-commerce-m-com.webp"
+      },
+      {
+        "name": "Bachelor of Journalism and Mass Communication (B.J.M.C.)",
+        "level": "Regular & distance mode",
+        "image": "assets/course-images/general-07-bachelor-of-journalism-and-mass-communication-b-j-.webp"
+      },
+      {
+        "name": "Master of Journalism and Mass Communication (M.J.M.C.)",
+        "level": "Regular & distance mode",
+        "image": "assets/course-images/general-08-master-of-journalism-and-mass-communication-m-j-m-.webp"
+      },
+      {
+        "name": "Diploma in Library Science (D.Lib.)",
+        "level": "Regular & distance mode",
+        "image": "assets/course-images/general-09-diploma-in-library-science-d-lib.webp"
+      },
+      {
+        "name": "Bachelor of Library Science (B.Lib.)",
+        "level": "Regular & distance mode",
+        "image": "assets/course-images/general-10-bachelor-of-library-science-b-lib.webp"
+      },
+      {
+        "name": "Master of Library & Information Science (M.Lib.)",
+        "level": "Regular & distance mode",
+        "image": "assets/course-images/general-11-master-of-library-information-science-m-lib.webp"
+      }
+    ]
+  },
+  {
+    "key": "engineering",
+    "title": "Engineering",
+    "page": "courses/engineering.html",
+    "entries": [
+      {
+        "name": "Civil Engineering",
+        "level": "Polytechnic / Diploma Engineering",
+        "image": "assets/course-images/engineering-01-civil-engineering.webp"
+      },
+      {
+        "name": "Mechanical Engineering",
+        "level": "Polytechnic / Diploma Engineering",
+        "image": "assets/course-images/engineering-02-mechanical-engineering.webp"
+      },
+      {
+        "name": "Electrical Engineering",
+        "level": "Polytechnic / Diploma Engineering",
+        "image": "assets/course-images/engineering-03-electrical-engineering.webp"
+      },
+      {
+        "name": "Computer Science Engineering",
+        "level": "Polytechnic / Diploma Engineering",
+        "image": "assets/course-images/engineering-04-computer-science-engineering.webp"
+      },
+      {
+        "name": "Electronics & Telecommunication Engineering",
+        "level": "Polytechnic / Diploma Engineering",
+        "image": "assets/course-images/engineering-05-electronics-telecommunication-engineering.webp"
+      },
+      {
+        "name": "Civil Engineering",
+        "level": "Bachelor of Engineering (B.Tech.)",
+        "image": "assets/course-images/engineering-06-civil-engineering.webp"
+      },
+      {
+        "name": "Mechanical Engineering",
+        "level": "Bachelor of Engineering (B.Tech.)",
+        "image": "assets/course-images/engineering-07-mechanical-engineering.webp"
+      },
+      {
+        "name": "Electrical & Electronics Engineering",
+        "level": "Bachelor of Engineering (B.Tech.)",
+        "image": "assets/course-images/engineering-08-electrical-electronics-engineering.webp"
+      },
+      {
+        "name": "Computer Science Engineering",
+        "level": "Bachelor of Engineering (B.Tech.)",
+        "image": "assets/course-images/engineering-09-computer-science-engineering.webp"
+      },
+      {
+        "name": "Electronics & Communication Engineering",
+        "level": "Bachelor of Engineering (B.Tech.)",
+        "image": "assets/course-images/engineering-10-electronics-communication-engineering.webp"
+      },
+      {
+        "name": "Information Technology",
+        "level": "Bachelor of Engineering (B.Tech.)",
+        "image": "assets/course-images/engineering-11-information-technology.webp"
+      },
+      {
+        "name": "Computer Science Engineering",
+        "level": "Master of Technology (M.Tech.)",
+        "image": "assets/course-images/engineering-12-computer-science-engineering.webp"
+      },
+      {
+        "name": "Digital Communication",
+        "level": "Master of Technology (M.Tech.)",
+        "image": "assets/course-images/engineering-13-digital-communication.webp"
+      },
+      {
+        "name": "Power System",
+        "level": "Master of Technology (M.Tech.)",
+        "image": "assets/course-images/engineering-14-power-system.webp"
+      },
+      {
+        "name": "Thermal Engineering",
+        "level": "Master of Technology (M.Tech.)",
+        "image": "assets/course-images/engineering-15-thermal-engineering.webp"
+      },
+      {
+        "name": "Structural Engineering",
+        "level": "Master of Technology (M.Tech.)",
+        "image": "assets/course-images/engineering-16-structural-engineering.webp"
+      },
+      {
+        "name": "Cyber Security",
+        "level": "Master of Technology (M.Tech.)",
+        "image": "assets/course-images/engineering-17-cyber-security.webp"
+      },
+      {
+        "name": "Computer Technology & Application",
+        "level": "Master of Technology (M.Tech.)",
+        "image": "assets/course-images/engineering-18-computer-technology-application.webp"
+      }
+    ]
+  },
+  {
+    "key": "management",
+    "title": "Management",
+    "page": "courses/management.html",
+    "entries": [
+      {
+        "name": "BBA",
+        "level": "Programs",
+        "image": "assets/course-images/management-01-bba.webp"
+      },
+      {
+        "name": "MBA",
+        "level": "Programs",
+        "image": "assets/course-images/management-02-mba.webp"
+      },
+      {
+        "name": "Human Resource",
+        "level": "Listed specializations",
+        "image": "assets/course-images/management-03-human-resource.webp"
+      },
+      {
+        "name": "Financial Planning & Analysis",
+        "level": "Listed specializations",
+        "image": "assets/course-images/management-04-financial-planning-analysis.webp"
+      },
+      {
+        "name": "Finance",
+        "level": "Listed specializations",
+        "image": "assets/course-images/management-05-finance.webp"
+      },
+      {
+        "name": "Operation & Production",
+        "level": "Listed specializations",
+        "image": "assets/course-images/management-06-operation-production.webp"
+      },
+      {
+        "name": "International Marketing",
+        "level": "Listed specializations",
+        "image": "assets/course-images/management-07-international-marketing.webp"
+      },
+      {
+        "name": "Health Care",
+        "level": "Listed specializations",
+        "image": "assets/course-images/management-08-health-care.webp"
+      },
+      {
+        "name": "Banking",
+        "level": "Listed specializations",
+        "image": "assets/course-images/management-09-banking.webp"
+      },
+      {
+        "name": "Mass Communication",
+        "level": "Listed specializations",
+        "image": "assets/course-images/management-10-mass-communication.webp"
+      },
+      {
+        "name": "Disaster Management",
+        "level": "Listed specializations",
+        "image": "assets/course-images/management-11-disaster-management.webp"
+      },
+      {
+        "name": "Digital Marketing",
+        "level": "Listed specializations",
+        "image": "assets/course-images/management-12-digital-marketing.webp"
+      },
+      {
+        "name": "Fashion Designing",
+        "level": "Listed specializations",
+        "image": "assets/course-images/management-13-fashion-designing.webp"
+      },
+      {
+        "name": "Interior Designing",
+        "level": "Listed specializations",
+        "image": "assets/course-images/management-14-interior-designing.webp"
+      },
+      {
+        "name": "International Business",
+        "level": "Listed specializations",
+        "image": "assets/course-images/management-15-international-business.webp"
+      },
+      {
+        "name": "Hospitality & Tourism",
+        "level": "Listed specializations",
+        "image": "assets/course-images/management-16-hospitality-tourism.webp"
+      },
+      {
+        "name": "Supply Chain",
+        "level": "Listed specializations",
+        "image": "assets/course-images/management-17-supply-chain.webp"
+      },
+      {
+        "name": "E-Commerce",
+        "level": "Listed specializations",
+        "image": "assets/course-images/management-18-e-commerce.webp"
+      },
+      {
+        "name": "Information Technology",
+        "level": "Listed specializations",
+        "image": "assets/course-images/management-19-information-technology.webp"
+      },
+      {
+        "name": "Business Analytics & Intelligence",
+        "level": "Listed specializations",
+        "image": "assets/course-images/management-20-business-analytics-intelligence.webp"
+      }
+    ]
+  },
+  {
+    "key": "agriculture",
+    "title": "Agriculture",
+    "page": "courses/agriculture.html",
+    "entries": [
+      {
+        "name": "Diploma in Agriculture",
+        "level": "Programs",
+        "image": "assets/course-images/agriculture-01-diploma-in-agriculture.webp"
+      },
+      {
+        "name": "B.Sc. in Agriculture",
+        "level": "Programs",
+        "image": "assets/course-images/agriculture-02-b-sc-in-agriculture.webp"
+      },
+      {
+        "name": "M.Sc. in Agriculture",
+        "level": "Programs",
+        "image": "assets/course-images/agriculture-03-m-sc-in-agriculture.webp"
+      }
+    ]
+  },
+  {
+    "key": "paramedical",
+    "title": "Paramedical",
+    "page": "courses/paramedical.html",
+    "entries": [
+      {
+        "name": "General Nursing and Midwifery (GNM)",
+        "level": "Nursing & allied health",
+        "image": "assets/course-images/paramedical-01-general-nursing-and-midwifery-gnm.webp"
+      },
+      {
+        "name": "Post Basic B.Sc. Nursing (PB.B.Sc.)",
+        "level": "Nursing & allied health",
+        "image": "assets/course-images/paramedical-02-post-basic-b-sc-nursing-pb-b-sc.webp"
+      },
+      {
+        "name": "B.Sc. Nursing",
+        "level": "Nursing & allied health",
+        "image": "assets/course-images/paramedical-03-b-sc-nursing.webp"
+      },
+      {
+        "name": "M.Sc. Nursing",
+        "level": "Nursing & allied health",
+        "image": "assets/course-images/paramedical-04-m-sc-nursing.webp"
+      },
+      {
+        "name": "Diploma in Medical Laboratory Technology (DMLT)",
+        "level": "Nursing & allied health",
+        "image": "assets/course-images/paramedical-05-diploma-in-medical-laboratory-technology-dmlt.webp"
+      },
+      {
+        "name": "Bachelor of Medical Laboratory Technology (BMLT)",
+        "level": "Nursing & allied health",
+        "image": "assets/course-images/paramedical-06-bachelor-of-medical-laboratory-technology-bmlt.webp"
+      },
+      {
+        "name": "OT Technician",
+        "level": "Nursing & allied health",
+        "image": "assets/course-images/paramedical-07-ot-technician.webp"
+      },
+      {
+        "name": "Diploma in Anesthesia Technician",
+        "level": "Nursing & allied health",
+        "image": "assets/course-images/paramedical-08-diploma-in-anesthesia-technician.webp"
+      },
+      {
+        "name": "Dialysis Technician",
+        "level": "Nursing & allied health",
+        "image": "assets/course-images/paramedical-09-dialysis-technician.webp"
+      },
+      {
+        "name": "Diploma of Pharmacy (D.Pharm.)",
+        "level": "Pharmacy",
+        "image": "assets/course-images/paramedical-10-diploma-of-pharmacy-d-pharm.webp"
+      },
+      {
+        "name": "Bachelor of Pharmacy (B.Pharm.)",
+        "level": "Pharmacy",
+        "image": "assets/course-images/paramedical-11-bachelor-of-pharmacy-b-pharm.webp"
+      },
+      {
+        "name": "Master of Pharmacy (M.Pharm.)",
+        "level": "Pharmacy",
+        "image": "assets/course-images/paramedical-12-master-of-pharmacy-m-pharm.webp"
+      }
+    ]
+  },
+  {
+    "key": "computer",
+    "title": "Computer applications",
+    "page": "courses/computer-applications.html",
+    "entries": [
+      {
+        "name": "Diploma in Computer Application (DCA)",
+        "level": "Programs",
+        "image": "assets/course-images/computer-01-diploma-in-computer-application-dca.webp"
+      },
+      {
+        "name": "Post Graduate Diploma in Computer Application (PGDCA)",
+        "level": "Programs",
+        "image": "assets/course-images/computer-02-post-graduate-diploma-in-computer-application-pgdc.webp"
+      },
+      {
+        "name": "Bachelor of Computer Application (BCA)",
+        "level": "Programs",
+        "image": "assets/course-images/computer-03-bachelor-of-computer-application-bca.webp"
+      },
+      {
+        "name": "Master of Computer Application (MCA)",
+        "level": "Programs",
+        "image": "assets/course-images/computer-04-master-of-computer-application-mca.webp"
+      }
+    ]
+  },
+  {
+    "key": "law",
+    "title": "Law",
+    "page": "courses/law.html",
+    "entries": [
+      {
+        "name": "Bachelor of Arts and Bachelor of Legislative Law (BALLB)",
+        "level": "Programs",
+        "image": "assets/course-images/law-01-bachelor-of-arts-and-bachelor-of-legislative-law-b.webp"
+      },
+      {
+        "name": "Bachelor of Business Administration and Bachelor of Legislative Law (BBALLB)",
+        "level": "Programs",
+        "image": "assets/course-images/law-02-bachelor-of-business-administration-and-bachelor-o.webp"
+      },
+      {
+        "name": "Bachelor of Legislative Law (LLB)",
+        "level": "Programs",
+        "image": "assets/course-images/law-03-bachelor-of-legislative-law-llb.webp"
+      },
+      {
+        "name": "Master of Law (LLM)",
+        "level": "Programs",
+        "image": "assets/course-images/law-04-master-of-law-llm.webp"
+      }
+    ]
+  },
+  {
+    "key": "certificates",
+    "title": "Certificate courses",
+    "page": "courses/certificate-courses.html",
+    "entries": [
+      {
+        "name": "Certificate in Yoga",
+        "level": "Certificate courses",
+        "image": "assets/course-images/certificates-01-certificate-in-yoga.webp"
+      },
+      {
+        "name": "Certificate in Fire Safety",
+        "level": "Certificate courses",
+        "image": "assets/course-images/certificates-02-certificate-in-fire-safety.webp"
+      },
+      {
+        "name": "Certificate in Industrial Safety",
+        "level": "Certificate courses",
+        "image": "assets/course-images/certificates-03-certificate-in-industrial-safety.webp"
+      },
+      {
+        "name": "Certificate in Disaster Management",
+        "level": "Certificate courses",
+        "image": "assets/course-images/certificates-04-certificate-in-disaster-management.webp"
+      },
+      {
+        "name": "Certificate in Environment Management",
+        "level": "Certificate courses",
+        "image": "assets/course-images/certificates-05-certificate-in-environment-management.webp"
+      },
+      {
+        "name": "Certificate in Painter",
+        "level": "Certificate courses",
+        "image": "assets/course-images/certificates-06-certificate-in-painter.webp"
+      },
+      {
+        "name": "Certificate in Aviation Management",
+        "level": "Certificate courses",
+        "image": "assets/course-images/certificates-07-certificate-in-aviation-management.webp"
+      },
+      {
+        "name": "Certificate in Retail Management",
+        "level": "Certificate courses",
+        "image": "assets/course-images/certificates-08-certificate-in-retail-management.webp"
+      }
+    ]
+  }
+]

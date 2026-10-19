@@ -10,7 +10,7 @@ Audited `https://ikonsol.co.in/` on 18 October 2026 using its rendered page, HTM
 | Hero | Student image background, “IKONSOL COLLEGE OF EDUCATION” headline, Contact Us button to `https://wa.link/zygeav`. | Supplied classroom video, matching video poster/static fallback, courses and contact calls to action. |
 | Our Top Courses | Engineering, Management, Paramedical, Agriculture, each with the same presentation icon. | Four illustrated cards linking to dedicated course-area pages. |
 | About Us | Mission statement about inclusive education, teacher training, higher learning/research and a knowledge society; Contact Us goes to the WhatsApp short link. | Edited for readability while keeping those claims and the IKONSOL identity. |
-| Course accordion | General, Engineering, Management, Agriculture, Paramedical, Computer Application and Law categories with the program lists below. | Searchable, filterable, keyboard-accessible `<details>` entries with every listed program on Courses, plus a detail page for each area. |
+| Course accordion | General, Engineering, Management, Agriculture, Paramedical, Computer Application and Law categories with the program lists below. | Every named program and specialization appears directly on Courses as an individual image card. Category filters and search work on the individual entries; each area also has a supporting overview page. |
 | Certificate Course | Eight listed certificate courses. | Dedicated catalog entry and detail page. |
 | “Council Members” | A heading, but no names or member information; below it are six feature cards: Engineering Courses, Hotel Management, Agricultural Courses, Paramedical Courses, Law Courses, Computer Application Courses. Each Contact Us button uses the same WhatsApp link. | Six areas remain discoverable in the catalog/contact flow. No council members were invented. Hotel Management is enquiry-only because no program list is supplied. |
 | “Find your district” | Embedded Google map for the city office; city and branch addresses, email and phone/fax. | City-office map, map link, both addresses, email and call/WhatsApp links plus enquiry form. |
@@ -20,7 +20,7 @@ The reference has no enquiry form. The new form is an added feature that prepare
 
 ## Page inventory
 
-The redesign has 13 static routes: Home (`/`), About (`/about.html`), Courses (`/courses.html`), Contact (`/contact.html`), and nine pages under `/courses/` for General courses, Engineering, Management, Agriculture, Paramedical, Computer applications, Law, Certificate courses, and Hotel management. The catalog searches the verified listings and links to detail pages where they are shown. Course enquiry links open Contact with the relevant area selected.
+The redesign has 13 static routes: Home (`/`), About (`/about.html`), Courses (`/courses.html`), Contact (`/contact.html`), and nine pages under `/courses/` for General courses, Engineering, Management, Agriculture, Paramedical, Computer applications, Law, Certificate courses, and Hotel management. The catalog shows all 80 named reference entries directly in their category sections. Course enquiry links open Contact with the relevant area and individual course selected.
 
 ## Course inventory
 
@@ -71,7 +71,7 @@ Every unique image referenced by the source HTML and its page stylesheet was dow
 
 The source did not provide a favicon. `favicon.png` and `apple-touch-icon.png` are cropped from its logo.
 
-The October 2026 course-page redesign uses the layout pattern of The Divine services page as a visual reference. Its imagery and content were not copied into IKONSOL. The catalog now displays the downloaded IKONSOL photographs as cards, and detail-page course names appear in plain tiles without visible list marks. The existing video poster serves as a generic classroom image for the Paramedical card; it makes no clinical claim.
+The October 2026 course-page redesign uses the layout pattern of The Divine services page as a visual reference. Its imagery and content were not copied into IKONSOL. The catalog now shows each named reference entry as its own card with a distinct generated WebP image. The generated scenes are illustrative and do not depict IKONSOL facilities or promise a particular course experience. [`data/course-catalog.json`](../data/course-catalog.json) inventories the 80 entries and the exact asset path for each. The supporting overview pages retain the original IKONSOL photos and plain course tiles without visible list marks.
 
 ## Uncertain or conflicting source details
 

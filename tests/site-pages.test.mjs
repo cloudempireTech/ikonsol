@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 
@@ -44,12 +45,27 @@ test('every page has working relative links, assets, unique metadata and one hea
   }
 });
 
-test('catalog links each course area to its detail and prefilled enquiry', () => {
+test('catalog shows every verified course directly with a distinct image and enquiry', () => {
   const catalog = readFileSync(resolve(root, 'courses.html'), 'utf8');
-  assert.equal([...catalog.matchAll(/<article class="course"/g)].length, 9);
-  assert.equal([...catalog.matchAll(/class="course__image"/g)].length, 9);
+  const groups = JSON.parse(readFileSync(resolve(root, 'data/course-catalog.json'), 'utf8'));
+  const entries = groups.flatMap((group) => group.entries);
+  assert.equal(entries.length, 80);
+  assert.equal(new Set(entries.map((entry) => entry.image)).size, entries.length);
+  assert.equal(new Set(entries.map((entry) => createHash('sha256').update(readFileSync(resolve(root, entry.image))).digest('hex'))).size, entries.length, 'every course image has distinct content');
+  assert.equal([...catalog.matchAll(/<section class="catalog-section"/g)].length, 9);
+  assert.equal([...catalog.matchAll(/<article class="detail-course"/g)].length, entries.length);
+  assert.equal([...catalog.matchAll(/class="detail-course__image"/g)].length, entries.length);
   assert.match(catalog, /data-search="[^"]*Cyber Security/);
   assert.doesNotMatch(catalog, /<(?:ul|li|details)\b/);
+  for (const group of groups) {
+    assert.ok(catalog.includes(`data-group="${group.key}"`));
+    const detail = readFileSync(resolve(root, group.page), 'utf8');
+    for (const entry of group.entries) {
+      assert.ok(catalog.includes(`<h4>${entry.name.replaceAll('&', '&amp;')}</h4>`), `${entry.name} shown in catalog`);
+      assert.ok(detail.includes(`<li>${entry.name.replaceAll('&', '&amp;')}</li>`), `${entry.name} verified on detail page`);
+      assert.ok(existsSync(resolve(root, entry.image)), `${entry.image} exists`);
+    }
+  }
   for (const page of coursePages) {
     assert.ok(catalog.includes(`href="./${page}"`), `catalog links ${page}`);
     const content = readFileSync(resolve(root, page), 'utf8');
