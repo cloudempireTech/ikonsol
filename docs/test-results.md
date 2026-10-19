@@ -14,6 +14,8 @@
 
 The image files in `assets/course-images/` are web-optimized illustrative scenes. They are not photographs of IKONSOL facilities. The source content and exact asset mapping are documented in `reference-inventory.md`, `generated-course-images.md`, and `data/course-catalog.json`.
 
+The GitHub Pages workflows for commit `17e8cc0936ef1f51e2b789fcad91d34e2300fddd` completed successfully. On the live `/ikonsol/courses.html` page, all 80 cards and nine sections rendered. The Engineering filter showed 18 entries, `Cyber Security` search showed one, the enquiry URL included the selected category and subject, the checked images loaded, and the browser reported no console errors.
+
 ## Earlier course page redesign — 19 October 2026
 
 | Check | Result |
