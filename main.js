@@ -7,6 +7,7 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 // A URL override exercises the same fallback in browser QA without changing OS preferences.
 const motionOverride = new URL(window.location.href).searchParams.get('motion') === 'reduce';
 const lessMotion = () => reduceMotion.matches || motionOverride;
+const heroVideoUrl = new URL('./assets/hero.mp4', import.meta.url).href;
 document.documentElement.classList.toggle('motion-reduced', lessMotion());
 
 function applyContactConfig() {
@@ -35,7 +36,7 @@ function setupVideo() {
     } else {
       video.hidden = false;
       if (!source.src) {
-        source.src = '/assets/hero.mp4';
+        source.src = heroVideoUrl;
         video.load();
       }
       video.play().catch(() => { video.hidden = true; });

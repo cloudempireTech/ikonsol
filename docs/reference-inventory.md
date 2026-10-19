@@ -52,7 +52,7 @@ The new catalog preserves these reference listings. Spelling and capitalization 
 
 ## Asset inventory
 
-Every unique image referenced by the source HTML and its page stylesheet was downloaded to `public/assets/`. The `*.webp` files are optimized copies used by the redesign.
+Every unique image referenced by the source HTML and its page stylesheet was downloaded to `assets/`. The `*.webp` files are optimized copies used by the redesign.
 
 | Original file | Reference use | New use |
 | --- | --- | --- |

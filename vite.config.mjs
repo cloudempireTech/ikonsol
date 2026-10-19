@@ -7,6 +7,7 @@ const pages = ['index.html', 'about.html', 'courses.html', 'contact.html',
   ...readdirSync(resolve(root, 'courses')).filter((file) => file.endsWith('.html')).map((file) => `courses/${file}`)];
 
 export default defineConfig({
+  base: './',
   build: {
     rollupOptions: {
       input: Object.fromEntries(pages.map((page) => [page, resolve(root, page)])),

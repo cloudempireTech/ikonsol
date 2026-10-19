@@ -23,7 +23,7 @@ The site has 13 directly addressable pages:
 - `/contact.html` — contact information, map and WhatsApp enquiry form.
 - `/courses/*.html` — one detail page for each of the nine catalog areas, with a course-prefilled enquiry link.
 
-`vite.config.mjs` includes every page in the static build. Each page has its own title, description, canonical URL and social preview metadata. `public/sitemap.xml` lists the routes. Update those URLs if the final domain differs from `ikonsol.co.in`.
+`vite.config.mjs` includes every page in the static build. Each page has its own title, description, canonical URL and social preview metadata. The canonical and sitemap URLs currently point to `https://cloudempiretech.github.io/ikonsol/`.
 
 ## Configuration
 
@@ -31,7 +31,7 @@ Edit [`site-config.mjs`](site-config.mjs) for the phone number, WhatsApp number,
 
 The Contact page enquiry form validates the visitor's name, at least one reply method, course and message, then prepares a WhatsApp deep link to the configured business number. Course-page links preselect the relevant area. The message includes the entered details. The visitor must review it and tap **Send** in WhatsApp; opening the link does not deliver a message by itself. A visible Open WhatsApp link remains on the page if the automatic new tab is blocked.
 
-No email API key or serverless function is required. The form includes a honeypot and timing check to reduce automated link creation, while WhatsApp itself requires the visitor to send the message. The user-provided video is compressed to `public/assets/hero.mp4` with its audio removed; the poster is an extracted frame from that same file. `?motion=reduce` is a browser QA override that exercises the same static fallback used by `prefers-reduced-motion`.
+No email API key or serverless function is required. The form includes a honeypot and timing check to reduce automated link creation, while WhatsApp itself requires the visitor to send the message. The user-provided video is compressed to `assets/hero.mp4` with its audio removed; the poster is an extracted frame from that same file. `?motion=reduce` is a browser QA override that exercises the same static fallback used by `prefers-reduced-motion`.
 
 ## Test
 
@@ -45,8 +45,8 @@ npm run build
 
 ## Deploy
 
-1. Connect this repository to Netlify or any static host. [`netlify.toml`](netlify.toml) sets `npm run build` and `dist/` for Netlify.
-2. Deploy, then verify that the WhatsApp enquiry opens with the right number and prefilled details on desktop and mobile. A human must tap **Send** in WhatsApp to complete the enquiry.
-3. Point `ikonsol.co.in` to the deployment when approved. Canonical, Open Graph and sitemap URLs target that domain; update them if publishing elsewhere.
+The live GitHub Pages site is [cloudempiretech.github.io/ikonsol](https://cloudempiretech.github.io/ikonsol/). The existing [Pages workflow](.github/workflows/static.yml) uploads the repository root on pushes to `main`; in repository settings choose **Pages → Build and deployment → GitHub Actions**. GitHub Pages serves the checked-in HTML, CSS, JavaScript and `assets/` directly. All local links are relative so the pages also work under the `/ikonsol/` path. `.nojekyll` keeps the static files unchanged.
 
-The reference audit, course and asset inventory, and content uncertainties are in [`docs/reference-inventory.md`](docs/reference-inventory.md). Source imagery is stored in `public/assets/` rather than hotlinked. No unsupported enrollment, placement or student statistics are shown.
+For another static host, run `npm run build` and deploy `dist/`. [`netlify.toml`](netlify.toml) already configures this for Netlify. Vite's relative base allows the build to run under a project subpath. Verify that WhatsApp opens with the configured number and prefilled details; a human must tap **Send** to deliver an enquiry. If the public domain changes, update canonical and social URLs in the HTML, both copies of the sitemap and robots files, and this README.
+
+The reference audit, course and asset inventory, and content uncertainties are in [`docs/reference-inventory.md`](docs/reference-inventory.md). Source imagery is stored in `assets/` rather than hotlinked. No unsupported enrollment, placement or student statistics are shown.

@@ -1,5 +1,21 @@
 # Test results — 18–19 October 2026
 
+## GitHub Pages path repair — 19 October 2026
+
+The first GitHub Pages deployment at `/ikonsol/` displayed unstyled HTML and broken images because root-relative URLs requested files from the domain root. The source pages now use relative links; `assets/` is at the repository root so branch-based Pages can serve it. Canonical and sitemap URLs target the current Pages address.
+
+| Check | Result |
+| --- | --- |
+| `npm run lint` | Pass across JavaScript and all 13 HTML pages. |
+| `npm test` | Pass: 6 tests, including every local link, image, script, stylesheet, page route, and GitHub Pages sitemap URL. |
+| `npm run build` | Pass: Vite includes all 13 pages, hashed images and the 815 KB hero video with relative asset paths. |
+| Raw branch at `/ikonsol/` | Pass in local browser: styled Home, loaded images and looping muted video (`readyState=4`); no horizontal overflow. |
+| Catalog and navigation | Pass at 390 px: mobile menu opens and navigates to Courses; `Cyber Security` search finds Engineering; detail page and prefilled Contact link work. |
+| Contact and reduced motion | Pass: blank form shows required-field errors; `?motion=reduce` pauses and hides video, removes its source, and retains the poster. |
+| Built site under a nested URL | Pass in local browser: page styling, images, hero video and navigation resolve under `/ikonsol/dist/`. |
+
+The live Pages deployment is checked after pushing the repair commit; results appear below once published.
+
 ## Automated checks
 
 | Check | Result |
