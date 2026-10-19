@@ -46,10 +46,16 @@ test('every page has working relative links, assets, unique metadata and one hea
 
 test('catalog links each course area to its detail and prefilled enquiry', () => {
   const catalog = readFileSync(resolve(root, 'courses.html'), 'utf8');
+  assert.equal([...catalog.matchAll(/<article class="course"/g)].length, 9);
+  assert.equal([...catalog.matchAll(/class="course__image"/g)].length, 9);
+  assert.match(catalog, /data-search="[^"]*Cyber Security/);
+  assert.doesNotMatch(catalog, /<(?:ul|li|details)\b/);
   for (const page of coursePages) {
     assert.ok(catalog.includes(`href="./${page}"`), `catalog links ${page}`);
     const content = readFileSync(resolve(root, page), 'utf8');
     assert.match(content, /href="\.\.\/contact\.html\?course=/, `${page} provides a course enquiry`);
+    assert.match(content, /class="course-page__cover"/, `${page} has a course image`);
+    assert.match(content, /href="\.\.\/courses\.css"/, `${page} uses the course design`);
   }
 });
 

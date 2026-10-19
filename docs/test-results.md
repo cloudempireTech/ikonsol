@@ -1,5 +1,18 @@
 # Test results — 18–19 October 2026
 
+## Course page redesign — 19 October 2026
+
+| Check | Result |
+| --- | --- |
+| Desktop visual review | Pass at 1440 px: warm-background category pills, prominent search, serif heading, and three-column photo cards with aligned Explore and Enquire actions. |
+| Mobile visual review | Pass at 390 px: single-column cards, horizontally scrollable category pills, visible search, and no page-level horizontal overflow. |
+| Search and filters | Pass in browser: `Cyber Security` returns Engineering; Clear restores all nine cards; Law filter shows only Law. |
+| Detail pages | Pass in browser: Law detail image loads, four verified course names appear as plain tiles with no bullet marks, and the enquiry link remains present. |
+| Assets and console | Pass: visible card/detail images loaded and no browser console errors appeared in the checked pages. |
+| Automated checks | `npm run lint`, `npm test` (6 tests), and `npm run build` pass. |
+
+The catalog keeps verified subjects in its search index, with the complete listings on the nine detail pages. The photos come from the IKONSOL source asset inventory; The Divine page supplied layout inspiration only.
+
 ## GitHub Pages path repair — 19 October 2026
 
 The first GitHub Pages deployment at `/ikonsol/` displayed unstyled HTML and broken images because root-relative URLs requested files from the domain root. The source pages now use relative links; `assets/` is at the repository root so branch-based Pages can serve it. Canonical and sitemap URLs target the current Pages address.
@@ -33,13 +46,13 @@ Tests used the built site served locally with `npm run preview`. The WhatsApp fo
 | Feature | Observed result |
 | --- | --- |
 | Navigation | Home → Courses → Engineering detail → Contact works. The course link preselects Engineering. All four primary navigation routes and nine detail routes exist. |
-| Search and discovery | Searching `Cyber Security` shows one Engineering area; its title opens the dedicated detail page with the verified Diploma, B.Tech and M.Tech listings. The earlier catalog filter and clear checks remain covered by the unchanged catalog controls. |
+| Search and discovery | Searching `Cyber Security` shows one Engineering area; its title opens the dedicated detail page with the verified Diploma, B.Tech and M.Tech listings. |
 | WhatsApp | Header/contact/floating links use `wa.me/918981729353` and an encoded IKONSOL course message. The reference short link redirects to the same number. |
 | Enquiry form | Empty submit shows field-specific errors. A valid sample enquiry prepares `wa.me/918981729353` with name, course, phone, and message; the page states that the visitor must tap Send in WhatsApp. A visible Open WhatsApp link remains available. Editing the message clears the prepared link and status. |
 | Hero media | On the final multipage Home, video loaded with `readyState=4`, playing muted and inline, with a 10-second duration and loop enabled. A full loop and desktop/mobile framing were checked in the earlier build; the video asset and hero styling are unchanged. |
 | Reduced motion | On the final Home, `?motion=reduce` hides and pauses the video, removes its source, retains the poster, and displays reveal elements. The CSS also contains a native `prefers-reduced-motion` rule. |
 | Responsive | At 390 px, Courses, Engineering, About and Contact fit without horizontal overflow; course listings and the enquiry form remain readable. The mobile menu opens, navigates to About, and closes after navigation. Tablet and desktop layouts were inspected in the earlier build. |
-| Accessibility | Skip link receives keyboard focus with a visible 3 px outline; images have descriptive alt text; form controls are labeled; catalog details and filters are native keyboard controls; reduced motion path verified. |
+| Accessibility | Skip link receives keyboard focus with a visible 3 px outline; images have descriptive alt text; form controls are labeled; category filters are native keyboard controls; reduced motion path verified. |
 | Links/assets/console | The route test finds no broken local links or anchors. All built HTML routes return HTTP 200. The browsed pages reported no console errors. External CloudEmpire, WhatsApp and Google Maps links were checked in the earlier build. |
 
 ## Limits

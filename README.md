@@ -19,9 +19,9 @@ The site has 13 directly addressable pages:
 
 - `/` — home, hero video, top courses and an introduction to IKONSOL.
 - `/about.html` — educational aims and background.
-- `/courses.html` — searchable catalog with filters and all verified listings.
+- `/courses.html` — image-led catalog cards with category filters and a search that covers verified subjects and specializations.
 - `/contact.html` — contact information, map and WhatsApp enquiry form.
-- `/courses/*.html` — one detail page for each of the nine catalog areas, with a course-prefilled enquiry link.
+- `/courses/*.html` — one detail page for each of the nine catalog areas, showing the full verified listings as plain tiles and a course-prefilled enquiry link.
 
 `vite.config.mjs` includes every page in the static build. Each page has its own title, description, canonical URL and social preview metadata. The canonical and sitemap URLs currently point to `https://cloudempiretech.github.io/ikonsol/`.
 

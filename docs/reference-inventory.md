@@ -20,7 +20,7 @@ The reference has no enquiry form. The new form is an added feature that prepare
 
 ## Page inventory
 
-The redesign has 13 static routes: Home (`/`), About (`/about.html`), Courses (`/courses.html`), Contact (`/contact.html`), and nine pages under `/courses/` for General courses, Engineering, Management, Agriculture, Paramedical, Computer applications, Law, Certificate courses, and Hotel management. The catalog retains all verified listings and links to those pages. Course enquiry links open Contact with the relevant area selected.
+The redesign has 13 static routes: Home (`/`), About (`/about.html`), Courses (`/courses.html`), Contact (`/contact.html`), and nine pages under `/courses/` for General courses, Engineering, Management, Agriculture, Paramedical, Computer applications, Law, Certificate courses, and Hotel management. The catalog searches the verified listings and links to detail pages where they are shown. Course enquiry links open Contact with the relevant area selected.
 
 ## Course inventory
 
@@ -58,18 +58,20 @@ Every unique image referenced by the source HTML and its page stylesheet was dow
 | --- | --- | --- |
 | `cropped-logo.png` | Header logo | Header/footer logo; source for favicon and touch icon. |
 | `presentation.png` | Four top-course icons | Preserved source asset; redesigned cards use photographs. |
-| `istockphoto-1272815911-612x612-1.jpg` | Hero background | Preserved source asset; supplied video replaces hero imagery. |
+| `istockphoto-1272815911-612x612-1.jpg` | Hero background | Optimized as `general-courses.webp` for the General courses card and detail page; supplied video replaces hero imagery. |
 | `Bulk-SMS-Service-for-Coaching-Institutes.jpg` | Council/feature card image | `management.webp`, `about-classroom.webp`. |
 | `b716d34d0297386d6b04961c7aa775a1.jpg` | Engineering and paramedical feature cards | `engineering.webp`. |
-| `Hotel-Manager-1.jpg` | Hotel Management feature card | Preserved original; course remains in catalog. |
+| `Hotel-Manager-1.jpg` | Hotel Management feature card | Optimized as `hotel-management.webp` for the catalog and detail page. |
 | `2020_2largeimg_755075284.jpg` | Agricultural feature card | `agriculture.webp`. |
-| `istockphoto-538235237-612x612-2.jpg` | Law feature card | Preserved original. |
-| `office-463284_1280.jpg` | Computer Application feature card | `paramedical.webp` (generic classroom image, no false clinical claim). |
+| `istockphoto-538235237-612x612-2.jpg` | Law feature card | Optimized as `law.webp` for the catalog and detail page. |
+| `office-463284_1280.jpg` | Computer Application feature card | Optimized as `computer-applications.webp`; the same source was used earlier for `paramedical.webp`. |
 | `081-university-1.png` | Decorative education icon | Preserved original. |
 | `pattern-1.png` | Elementor section background | Preserved original. |
 | User-supplied `gemini_generated_video_d5442046.mp4` | Not on reference | `hero.mp4`, H.264 silent fast-start encode; `hero-poster.jpg` extracted at 2 seconds. |
 
 The source did not provide a favicon. `favicon.png` and `apple-touch-icon.png` are cropped from its logo.
+
+The October 2026 course-page redesign uses the layout pattern of The Divine services page as a visual reference. Its imagery and content were not copied into IKONSOL. The catalog now displays the downloaded IKONSOL photographs as cards, and detail-page course names appear in plain tiles without visible list marks. The existing video poster serves as a generic classroom image for the Paramedical card; it makes no clinical claim.
 
 ## Uncertain or conflicting source details
 

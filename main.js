@@ -74,22 +74,10 @@ function setupCatalog() {
     let count = 0;
     courses.forEach((course) => {
       const groupMatch = active === 'all' || course.dataset.group === active;
-      const queryMatch = !query || course.textContent.toLocaleLowerCase().includes(query);
+      const queryMatch = !query || course.dataset.search.toLocaleLowerCase().includes(query);
       const visible = groupMatch && queryMatch;
       course.hidden = !visible;
       if (visible) count++;
-      const details = course.querySelector('details');
-      if (details && query && visible) {
-        const intro = course.querySelector('.course__main > p:not(.course__eyebrow)')?.textContent.toLocaleLowerCase() || '';
-        const title = course.querySelector('h3').textContent.toLocaleLowerCase();
-        if (!intro.includes(query) && !title.includes(query)) {
-          details.open = true;
-          details.dataset.searchOpen = 'true';
-        }
-      } else if (details?.dataset.searchOpen === 'true') {
-        details.open = false;
-        delete details.dataset.searchOpen;
-      }
     });
     $('#result-count').textContent = `${count} course ${count === 1 ? 'area' : 'areas'} shown`;
     $('#no-results').hidden = count !== 0;
