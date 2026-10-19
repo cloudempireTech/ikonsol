@@ -13,6 +13,8 @@
 
 The catalog keeps verified subjects in its search index, with the complete listings on the nine detail pages. The photos come from the IKONSOL source asset inventory; The Divine page supplied layout inspiration only.
 
+The GitHub Pages deployment of commit `854a706` succeeded. On the live `/ikonsol/courses.html` page, all nine cards and both stylesheets loaded; the desktop grid had three columns and no horizontal overflow. Live search for `Cyber Security` returned Engineering, and its detail page showed 18 plain course tiles with computed `list-style: none` and no `::before` marker. The checked live pages had no console errors.
+
 ## GitHub Pages path repair — 19 October 2026
 
 The first GitHub Pages deployment at `/ikonsol/` displayed unstyled HTML and broken images because root-relative URLs requested files from the domain root. The source pages now use relative links; `assets/` is at the repository root so branch-based Pages can serve it. Canonical and sitemap URLs target the current Pages address.
