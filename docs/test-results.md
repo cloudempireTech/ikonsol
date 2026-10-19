@@ -14,7 +14,7 @@ The first GitHub Pages deployment at `/ikonsol/` displayed unstyled HTML and bro
 | Contact and reduced motion | Pass: blank form shows required-field errors; `?motion=reduce` pauses and hides video, removes its source, and retains the poster. |
 | Built site under a nested URL | Pass in local browser: page styling, images, hero video and navigation resolve under `/ikonsol/dist/`. |
 
-The live Pages deployment is checked after pushing the repair commit; results appear below once published.
+The live GitHub Pages deployment for commit `53b34bd` completed successfully. In the live browser, Home is styled; the logo and visible images load; the muted, looping hero video loads from `/ikonsol/assets/hero.mp4` with `readyState=4`; and primary links stay within `/ikonsol/`. At 390 px, Courses and Engineering show no horizontal overflow. Searching `Cyber Security` finds Engineering, its detail link opens, and its enquiry link opens Contact with Engineering selected. WhatsApp links target `wa.me/918981729353`; no browser console errors were reported on the checked pages.
 
 ## Automated checks
 
