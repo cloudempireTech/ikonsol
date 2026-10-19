@@ -19,8 +19,8 @@ const sections = catalog.map(({ key, title, page, entries }) => {
   const cards = entries.map(({ name, level, image }, index) => {
     const id = `${key}-course-${index + 1}`;
     const href = `./contact.html?course=${encodeURIComponent(title)}&subject=${encodeURIComponent(name)}#enquiry-form`;
-    return `          <article class="detail-course" id="${id}" data-search="${escape(`${title} ${level} ${name}`)}">
-            <img class="detail-course__image" src="./${escape(image)}" alt="Illustrative learning scene for ${escape(name)}" width="960" height="640" loading="lazy" decoding="async">
+    return `          <article class="detail-course reveal" id="${id}" data-search="${escape(`${title} ${level} ${name}`)}">
+            <div class="detail-course__media"><img class="detail-course__image" src="./${escape(image)}" alt="Illustrative learning scene for ${escape(name)}" width="960" height="640" loading="lazy" decoding="async"></div>
             <div class="detail-course__body"><p class="detail-course__level">${escape(level)}</p><h4>${escape(name)}</h4><a class="detail-course__enquire" href="${escape(href)}" aria-label="Enquire about ${escape(name)}">Enquire about this course <span aria-hidden="true">↗</span></a></div>
           </article>`;
   }).join('\n');

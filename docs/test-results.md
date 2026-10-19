@@ -1,4 +1,14 @@
-# Test results — 18–19 October 2026
+# Test results — 18–20 October 2026
+
+## Course card scroll motion — 20 October 2026
+
+| Check | Result |
+| --- | --- |
+| Desktop scroll reveal | Pass: offscreen cards begin unrevealed; entering the viewport activates the card, image, and copy animations. Three-column rows use 0, 90, and 180 ms staggered starts. |
+| Mobile layout | Pass at 390 px: one-column cards animate without stagger, and the page has no horizontal overflow. |
+| Reduced motion | Pass with `?motion=reduce`: all 80 cards appear immediately with `animation: none`, full opacity, and no transform. |
+| Static fallback | The Courses page includes a no-JavaScript style that leaves its reveal content visible. |
+| Automated checks | `npm run lint`, `npm test` (6 tests), and `npm run build` pass. |
 
 ## Individual course catalog — 19 October 2026
 

@@ -53,7 +53,8 @@ test('catalog shows every verified course directly with a distinct image and enq
   assert.equal(new Set(entries.map((entry) => entry.image)).size, entries.length);
   assert.equal(new Set(entries.map((entry) => createHash('sha256').update(readFileSync(resolve(root, entry.image))).digest('hex'))).size, entries.length, 'every course image has distinct content');
   assert.equal([...catalog.matchAll(/<section class="catalog-section"/g)].length, 9);
-  assert.equal([...catalog.matchAll(/<article class="detail-course"/g)].length, entries.length);
+  assert.equal([...catalog.matchAll(/<article class="detail-course reveal"/g)].length, entries.length);
+  assert.equal([...catalog.matchAll(/class="detail-course__media"/g)].length, entries.length);
   assert.equal([...catalog.matchAll(/class="detail-course__image"/g)].length, entries.length);
   assert.match(catalog, /data-search="[^"]*Cyber Security/);
   assert.doesNotMatch(catalog, /<(?:ul|li|details)\b/);
