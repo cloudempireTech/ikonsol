@@ -8,7 +8,7 @@ Audited `https://ikonsol.co.in/` on 18 October 2026 using its rendered page, HTM
 | --- | --- | --- |
 | Top strip/header | Phone `+91 8981729353`; IKONSOL logo; Home, About Us, Our Courses, Contact Us. Mobile menu includes the same four items and a site search. | The four items lead to distinct Home, About, Courses and Contact pages; mobile menu; course-specific search on Courses. |
 | Hero | Student image background, “IKONSOL COLLEGE OF EDUCATION” headline, Contact Us button to `https://wa.link/zygeav`. | Supplied classroom video, matching video poster/static fallback, courses and contact calls to action. |
-| Our Top Courses | Engineering, Management, Paramedical, Agriculture, each with the same presentation icon. | Four illustrated cards linking to dedicated course-area pages. |
+| Our Top Courses | Engineering, Management, Paramedical, Agriculture, each with the same presentation icon. | Four illustrated cards linking to dedicated course-area pages, plus a full catalog card. |
 | About Us | Mission statement about inclusive education, teacher training, higher learning/research and a knowledge society; Contact Us goes to the WhatsApp short link. | Edited for readability while keeping those claims and the IKONSOL identity. |
 | Course accordion | General, Engineering, Management, Agriculture, Paramedical, Computer Application and Law categories with the program lists below. | Every named program and specialization appears directly on Courses as an individual image card. Category filters and search work on the individual entries; each area also has a supporting overview page. |
 | Certificate Course | Eight listed certificate courses. | Dedicated catalog entry and detail page. |
@@ -17,6 +17,8 @@ Audited `https://ikonsol.co.in/` on 18 October 2026 using its rendered page, HTM
 | Footer | Short About text, four quick links, address/phone/email, copyright. | IKONSOL information and navigation, with required “Designed by CloudEmpire” footer link. |
 
 The reference has no enquiry form. The new form is an added feature that prepares a WhatsApp message for the verified number; the visitor sends it in WhatsApp. The reference has no verified statistics, so animated counters were intentionally omitted.
+
+The expanded Home page also highlights General courses, Computer applications, Law and Certificate courses using the existing verified catalog entries. Hotel management remains an enquiry-only area. Its mission cards paraphrase the reference's stated aims; the abstract artwork is CSS, without additional sourced or generated images.
 
 ## Page inventory
 

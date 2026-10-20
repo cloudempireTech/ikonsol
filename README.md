@@ -17,7 +17,7 @@ Open the URL printed by Vite. `npm run build` writes the static site to `dist/`;
 
 The site has 13 directly addressable pages:
 
-- `/` — home, hero video, top courses and an introduction to IKONSOL.
+- `/` — home, hero video, highlighted course areas, abstract course discovery cards, IKONSOL's stated aims, and a short guide from browsing to enquiry.
 - `/about.html` — educational aims and background.
 - `/courses.html` — all 80 named programs and specializations shown directly as individual image cards, grouped by category, with category filters and live search. Hotel management remains an enquiry area because the reference does not name a program.
 - `/contact.html` — contact information, map and WhatsApp enquiry form.

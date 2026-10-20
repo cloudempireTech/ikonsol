@@ -1,5 +1,14 @@
 # Test results — 18–20 October 2026
 
+## Expanded Home page — 20 October 2026
+
+| Check | Result |
+| --- | --- |
+| Content | General, Computer applications, Law and Certificate cards link to the corresponding catalog anchors. Hotel management points to its enquiry-only overview. IKONSOL mission cards use the reference's stated aims. |
+| Desktop, tablet and mobile | Browser checks at 1440, 768 and 390 px confirm the abstract cards, mission cards and enquiry steps reflow without horizontal overflow. No browser console errors or failed local assets occurred. |
+| Interaction and motion | Computer applications card opens the correct catalog section. Scroll reveal activates for the new cards; `?motion=reduce` removes transitions. The Home page includes a no-JavaScript reveal fallback. |
+| Automated checks | `npm run lint`, `npm test` (7 tests), and `npm run build` pass. |
+
 ## Home top courses catalog link — 20 October 2026
 
 The “Explore top courses” section now includes a full-width “View all courses” card linking to `/courses.html`. Browser checks at 1440 px and 390 px confirmed the card is visible, opens the catalog, and causes no horizontal overflow or console errors. `npm run lint`, `npm test` (7 tests), and `npm run build` pass.
