@@ -20,7 +20,7 @@ The reference has no enquiry form. The new form is an added feature that prepare
 
 ## Page inventory
 
-The redesign has 13 static routes: Home (`/`), About (`/about.html`), Courses (`/courses.html`), Contact (`/contact.html`), and nine pages under `/courses/` for General courses, Engineering, Management, Agriculture, Paramedical, Computer applications, Law, Certificate courses, and Hotel management. The catalog shows all 80 named reference entries directly in their category sections. Course enquiry links open Contact with the relevant area and individual course selected.
+The redesign has 13 static routes: Home (`/`), About (`/about.html`), Courses (`/courses.html`), Contact (`/contact.html`), and nine pages under `/courses/` for General courses, Engineering, Management, Agriculture, Paramedical, Computer applications, Law, Certificate courses, and Hotel management. The catalog shows all 80 named reference entries directly in their category sections. Engineering is visibly grouped under the reference headings “Polytechnic / Diploma Engineering,” “Bachelor of Engineering (B.Tech.),” and “Masters of Technology (M.Tech).” Management's BBA/MBA programs and specializations, and Paramedical's nursing/allied health and pharmacy entries, also have their own visible groups. “Programs,” “Listed specializations,” and “Nursing & allied health” are organizational labels in the redesign; the source presents those entries as prose. Course enquiry links open Contact with the relevant area and individual course selected. When a subject appears at multiple Engineering levels, its enquiry also names the level.
 
 ## Course inventory
 

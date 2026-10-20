@@ -62,7 +62,7 @@ test('catalog shows every verified course directly with a distinct image and enq
     assert.ok(catalog.includes(`data-group="${group.key}"`));
     const detail = readFileSync(resolve(root, group.page), 'utf8');
     for (const entry of group.entries) {
-      assert.ok(catalog.includes(`<h4>${entry.name.replaceAll('&', '&amp;')}</h4>`), `${entry.name} shown in catalog`);
+      assert.match(catalog, new RegExp(`<h[45]>${entry.name.replaceAll('&', '&amp;').replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}</h[45]>`), `${entry.name} shown in catalog`);
       assert.ok(detail.includes(`<li>${entry.name.replaceAll('&', '&amp;')}</li>`), `${entry.name} verified on detail page`);
       assert.ok(existsSync(resolve(root, entry.image)), `${entry.image} exists`);
     }
@@ -74,6 +74,34 @@ test('catalog shows every verified course directly with a distinct image and enq
     assert.match(content, /class="course-page__cover"/, `${page} has a course image`);
     assert.match(content, /href="\.\.\/courses\.css"/, `${page} uses the course design`);
   }
+});
+
+test('source course levels appear as visible catalog subgroups', () => {
+  const catalog = readFileSync(resolve(root, 'courses.html'), 'utf8');
+  const groups = JSON.parse(readFileSync(resolve(root, 'data/course-catalog.json'), 'utf8'));
+  const expected = {
+    engineering: ['Polytechnic / Diploma Engineering', 'Bachelor of Engineering (B.Tech.)', 'Masters of Technology (M.Tech)'],
+    management: ['Programs', 'Listed specializations'],
+    paramedical: ['Nursing & allied health', 'Pharmacy'],
+  };
+  for (const [key, levels] of Object.entries(expected)) {
+    const entries = groups.find((group) => group.key === key).entries;
+    for (const [index, level] of levels.entries()) {
+      const id = `${key}-subgroup-${index + 1}`;
+      const start = catalog.indexOf(`<section class="catalog-subgroup" aria-labelledby="${id}">`);
+      const end = catalog.indexOf('</section>', start);
+      assert.ok(start >= 0 && end > start, `${key}: ${level} has its own section`);
+      const markup = catalog.slice(start, end);
+      assert.ok(markup.includes(`<h4 id="${id}">${level.replaceAll('&', '&amp;')}</h4>`));
+      const expectedEntries = entries.filter((entry) => entry.level === level);
+      assert.equal([...markup.matchAll(/<article class="detail-course reveal"/g)].length, expectedEntries.length);
+      for (const entry of expectedEntries) {
+        assert.ok(markup.includes(`<h5>${entry.name.replaceAll('&', '&amp;')}</h5>`), `${entry.name} grouped under ${level}`);
+      }
+    }
+  }
+  assert.ok(catalog.includes('subject=Civil%20Engineering%20%E2%80%94%20Polytechnic%20%2F%20Diploma%20Engineering'));
+  assert.ok(catalog.includes('subject=Civil%20Engineering%20%E2%80%94%20Bachelor%20of%20Engineering%20(B.Tech.)'));
 });
 
 test('sitemap and robots list GitHub Pages routes', () => {

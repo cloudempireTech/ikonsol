@@ -123,37 +123,37 @@
       },
       {
         "name": "Computer Science Engineering",
-        "level": "Master of Technology (M.Tech.)",
+        "level": "Masters of Technology (M.Tech)",
         "image": "assets/course-images/engineering-12-computer-science-engineering.webp"
       },
       {
         "name": "Digital Communication",
-        "level": "Master of Technology (M.Tech.)",
+        "level": "Masters of Technology (M.Tech)",
         "image": "assets/course-images/engineering-13-digital-communication.webp"
       },
       {
         "name": "Power System",
-        "level": "Master of Technology (M.Tech.)",
+        "level": "Masters of Technology (M.Tech)",
         "image": "assets/course-images/engineering-14-power-system.webp"
       },
       {
         "name": "Thermal Engineering",
-        "level": "Master of Technology (M.Tech.)",
+        "level": "Masters of Technology (M.Tech)",
         "image": "assets/course-images/engineering-15-thermal-engineering.webp"
       },
       {
         "name": "Structural Engineering",
-        "level": "Master of Technology (M.Tech.)",
+        "level": "Masters of Technology (M.Tech)",
         "image": "assets/course-images/engineering-16-structural-engineering.webp"
       },
       {
         "name": "Cyber Security",
-        "level": "Master of Technology (M.Tech.)",
+        "level": "Masters of Technology (M.Tech)",
         "image": "assets/course-images/engineering-17-cyber-security.webp"
       },
       {
         "name": "Computer Technology & Application",
-        "level": "Master of Technology (M.Tech.)",
+        "level": "Masters of Technology (M.Tech)",
         "image": "assets/course-images/engineering-18-computer-technology-application.webp"
       }
     ]

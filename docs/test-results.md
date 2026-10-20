@@ -1,5 +1,15 @@
 # Test results — 18–20 October 2026
 
+## Course subgroup layout — 20 October 2026
+
+| Check | Result |
+| --- | --- |
+| Source headings | Pass: Engineering Diploma (5), B.Tech (6), and M.Tech (7) appear as separate card groups using the source's headings. Management and Paramedical entries are grouped by their listed program types. |
+| Search and filters | Pass in desktop and mobile browsers: Engineering shows 18 cards; “Bachelor of Engineering” shows six B.Tech cards; “Cyber Security” shows only the M.Tech group; “Pharmacy” shows three cards and hides the other Paramedical group. |
+| Course enquiries | Pass: repeated Engineering subjects include their degree level in the enquiry link so Diploma and B.Tech Civil Engineering are distinguishable. |
+| Mobile layout | Pass at 390 px: one-column cards, loaded images, working menu, and no horizontal overflow. |
+| Errors and checks | No browser console errors or failed local asset requests. `npm run lint`, `npm test` (7 tests), and `npm run build` pass. |
+
 ## Course card scroll motion — 20 October 2026
 
 | Check | Result |

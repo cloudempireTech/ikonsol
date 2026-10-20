@@ -87,6 +87,9 @@ function setupCatalog() {
         card.hidden = !visible;
         if (visible) sectionCount++;
       });
+      section.querySelectorAll('.catalog-subgroup').forEach((subgroup) => {
+        subgroup.hidden = !subgroup.querySelector('.detail-course:not([hidden])');
+      });
       section.hidden = sectionCount === 0;
       count += sectionCount;
     });
