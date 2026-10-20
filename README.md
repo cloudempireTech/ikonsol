@@ -2,6 +2,8 @@
 
 A responsive, framework-free website for IKONSOL College of Education. It uses semantic HTML, CSS and vanilla JavaScript, with Vite only for development and production asset packaging. The site uses IKONSOL branding throughout; CloudEmpire is credited only in the footer.
 
+Scroll-driven parallax adds depth to the hero media, course imagery, abstract cards and decorative backgrounds throughout the pages. It updates visible elements in one animation frame per scroll, keeps text and controls still, and becomes static under `prefers-reduced-motion` or the `?motion=reduce` QA override.
+
 ## Start locally
 
 Requires Node.js 20.19+ or 22.12+.

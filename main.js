@@ -180,10 +180,69 @@ function setupReveal() {
   $$('.reveal').forEach((item) => observer.observe(item));
 }
 
+function setupParallax() {
+  if (!('IntersectionObserver' in window)) return;
+
+  const layers = [
+    ['.hero__media', 30],
+    ['.page-hero', 48],
+    ['.top-card', 30],
+    ['.discover-card', 44],
+    ['.purpose', 62],
+    ['.next-step', 24],
+    ['.about__visual', 32],
+    ['.contact-banner', 42],
+    ['.detail-course__media', 18],
+    ['.catalog-section__notice', 26],
+    ['.course-page__cover', 24],
+    ['.footer', 50],
+  ].flatMap(([selector, distance]) => $$(selector).map((element) => ({ element, distance })));
+  if (!layers.length) return;
+
+  const visible = new Set();
+  const byElement = new Map(layers.map((layer) => [layer.element, layer]));
+  let frame = 0;
+  const reset = () => layers.forEach(({ element }) => element.style.setProperty('--parallax-y', '0px'));
+  const paint = () => {
+    frame = 0;
+    if (lessMotion()) return;
+    const viewportCenter = window.innerHeight / 2;
+    visible.forEach(({ element, distance }) => {
+      if (element.closest('[hidden]')) return;
+      const rect = element.getBoundingClientRect();
+      const progress = Math.max(-1, Math.min(1, (viewportCenter - rect.top - rect.height / 2) / window.innerHeight));
+      element.style.setProperty('--parallax-y', `${(progress * distance).toFixed(1)}px`);
+    });
+  };
+  const schedule = () => {
+    if (!frame && !lessMotion()) frame = window.requestAnimationFrame(paint);
+  };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const layer = byElement.get(entry.target);
+      if (entry.isIntersecting) visible.add(layer);
+      else visible.delete(layer);
+    });
+    schedule();
+  }, { rootMargin: '120px 0px' });
+  layers.forEach(({ element }) => observer.observe(element));
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', schedule);
+  reduceMotion.addEventListener('change', () => {
+    if (lessMotion()) {
+      if (frame) window.cancelAnimationFrame(frame);
+      frame = 0;
+      reset();
+    } else schedule();
+  });
+  if (lessMotion()) reset();
+}
+
 applyContactConfig();
 setupVideo();
 setupMenu();
 setupCatalog();
 setupEnquiry();
 setupReveal();
+setupParallax();
 $('#year').textContent = String(new Date().getFullYear());

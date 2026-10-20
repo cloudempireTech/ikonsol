@@ -95,3 +95,23 @@
 @media(max-width:540px){.discover__heading h2,.purpose__heading h2{font-size:clamp(3.15rem,13vw,4.4rem)}.discover__grid{grid-template-columns:1fr;gap:13px}.discover-card{min-height:290px;padding:25px}.discover-card__art{width:190px;height:190px}.discover-card__copy{padding-top:78px}.discover-card__copy h3{font-size:2rem}.discover__hotel{align-items:flex-start;flex-direction:column;gap:17px;padding:25px}.purpose-card{padding:26px}.next-steps__actions{align-items:stretch;flex-direction:column;gap:25px}.next-steps__actions .button{align-self:flex-start}}
 @media(prefers-reduced-motion:reduce){.discover-card:hover,.purpose-card:hover{transform:none}.discover-card:hover .discover-card__art{transform:none}}
 :root.motion-reduced .discover-card:hover,:root.motion-reduced .purpose-card:hover{transform:none}:root.motion-reduced .discover-card:hover .discover-card__art{transform:none}
+
+/* Scroll depth moves only decorative layers; text and controls stay fixed. */
+.hero__media{inset:-34px 0;transform:translate3d(0,var(--parallax-y,0px),0)}
+.top-card img,.about__visual img{object-position:center calc(50% + var(--parallax-y,0px))}
+.discover-card__art{transform:translate3d(0,var(--parallax-y,0px),0) rotate(-20deg)}
+.discover-card:hover .discover-card__art{transform:translate3d(0,var(--parallax-y,0px),0) rotate(3deg) scale(1.05)}
+.discover-card--computer .discover-card__art{transform:translate3d(0,var(--parallax-y,0px),0) rotate(18deg)}
+.discover-card--computer:hover .discover-card__art{transform:translate3d(0,var(--parallax-y,0px),0) rotate(6deg) scale(1.05)}
+.purpose::before,.purpose::after{transform:translate3d(0,var(--parallax-y,0px),0)}
+.next-step__number{transform:translate3d(0,var(--parallax-y,0px),0)}
+.page-hero,.contact-banner,.footer{position:relative;overflow:hidden;isolation:isolate}
+.page-hero::before,.contact-banner::before,.footer::before{content:'';position:absolute;z-index:-1;pointer-events:none;width:min(72vw,740px);aspect-ratio:1;border:1px solid rgba(189,228,204,.15);border-radius:50%;box-shadow:0 0 0 90px rgba(189,228,204,.025),0 0 0 190px rgba(189,228,204,.018);transform:translate3d(0,var(--parallax-y,0px),0)}
+.page-hero::before{right:-190px;top:-360px}
+.contact-banner::before{right:-80px;top:-350px}
+.footer::before{left:-250px;bottom:-370px}
+.page-hero__inner,.contact-banner__inner,.footer>.shell{position:relative;z-index:1}
+@media(prefers-reduced-motion:reduce){.hero__media,.purpose::before,.purpose::after,.next-step__number,.page-hero::before,.contact-banner::before,.footer::before{transform:none}.top-card img,.about__visual img{object-position:center}.discover-card__art,.discover-card:hover .discover-card__art,.discover-card--computer .discover-card__art,.discover-card--computer:hover .discover-card__art{transform:none}}
+:root.motion-reduced .hero__media,:root.motion-reduced .purpose::before,:root.motion-reduced .purpose::after,:root.motion-reduced .next-step__number,:root.motion-reduced .page-hero::before,:root.motion-reduced .contact-banner::before,:root.motion-reduced .footer::before{transform:none}
+:root.motion-reduced .top-card img,:root.motion-reduced .about__visual img{object-position:center}
+:root.motion-reduced .discover-card__art,:root.motion-reduced .discover-card:hover .discover-card__art,:root.motion-reduced .discover-card--computer .discover-card__art,:root.motion-reduced .discover-card--computer:hover .discover-card__art{transform:none}

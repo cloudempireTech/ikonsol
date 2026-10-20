@@ -112,3 +112,15 @@ Tests used the built site served locally with `npm run preview`. The WhatsApp fo
 - Mobile playback was checked in a 390 px Chrome viewport, not on a physical iOS or Android device.
 - The reduced-motion browser check used the documented URL override. Actual OS-level motion preference was not changed on the user's computer.
 - The source site's Florida footer address and incomplete Hotel Management/Council Members information remain flagged in `reference-inventory.md` rather than guessed.
+
+## Parallax update — 20 October 2026
+
+| Check | Result |
+| --- | --- |
+| Static checks | `npm run lint`, `npm test` (7 tests), and `npm run build` pass. |
+| All page routes | At 1440 px and 390 px, all 13 pages show a changing scroll offset on hero media or decorative backgrounds. No horizontal overflow or browser console errors. |
+| Course imagery | The visible catalog card image changes its offset while scrolling at both widths. Search still finds `computer science` courses. |
+| Motion preferences | Native `prefers-reduced-motion: reduce` and `?motion=reduce` hold offsets at `0px`. The native preference hides the video and shows its poster. |
+| Hero playback | At 390 px in Chrome, the hero video loaded and played muted, inline and on loop. |
+
+These checks ran in headless Chrome against the local Vite site. Screen captures of the desktop and mobile hero and a course card were inspected for readable text, intact image framing and clipping. Physical mobile devices were not used.
