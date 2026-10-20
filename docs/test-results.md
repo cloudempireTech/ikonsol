@@ -11,7 +11,7 @@
 
 ## Home top courses catalog link — 20 October 2026
 
-The “Explore top courses” section now includes a full-width “View all courses” card linking to `/courses.html`. Browser checks at 1440 px and 390 px confirmed the card is visible, opens the catalog, and causes no horizontal overflow or console errors. `npm run lint`, `npm test` (7 tests), and `npm run build` pass.
+The “Explore top courses” section includes a fifth, full-width “View all courses” image card linking to `/courses.html`. Its image is a local copy of the reference site's General courses photo. The card uses a dark overlay to keep its heading readable. Browser checks at 1440, 768 and 390 px confirmed the image loads, the text and arrow stay within the card, the link opens the catalog, and there is no horizontal overflow or console error. `npm run lint`, `npm test` (7 tests), and `npm run build` pass.
 
 ## Course subgroup layout — 20 October 2026
 
