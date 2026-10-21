@@ -128,3 +128,9 @@ These checks ran in headless Chrome against the local Vite site. Screen captures
 ## Company name update — 21 October 2026
 
 The live site copy, page titles and descriptions, accessibility labels, WhatsApp greeting, logo, favicon, and Apple touch icon now use **Ikonsol Edutech Pvt. Limited**. The source audit retains its original wording as a historical record. Automated checks pass with `npm run lint`, `npm test` (7 tests), and `npm run build`. Browser checks covered all 13 pages at 1440, 768, and 390 px: the new logo and favicon loaded, the previous company name was absent from visible page copy, and no horizontal overflow or console errors appeared. Desktop and mobile header and About screenshots were reviewed. WhatsApp links included the new company name in the prepared message.
+
+## Courses page layout — 21 October 2026
+
+The catalog opens with General courses selected, while **All courses** still reveals every listing on the same page. The existing course names, descriptions, categories, subgroup labels, images and enquiry links were kept. Search automatically spans all categories. A category fragment such as `#law` opens the matching section. The page uses a shorter hero, a compact search and filter panel, and lighter course cards with simpler title typography.
+
+`npm run lint`, `npm test` (7 tests), and `npm run build` pass. Browser checks at 1440, 768, and 390 px confirmed the initial 11 General cards, 18 Engineering cards on selection, all 80 cards via **All courses**, Cyber Security search, Hotel management enquiry, direct category fragments, image loading while scrolling, and no horizontal overflow or console errors. Desktop and mobile screenshots were visually reviewed.

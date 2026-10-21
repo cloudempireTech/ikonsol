@@ -21,7 +21,7 @@ The site has 13 directly addressable pages:
 
 - `/` — home, hero video, highlighted course areas, abstract course discovery cards, Ikonsol Edutech Pvt. Limited's stated aims, and a short guide from browsing to enquiry.
 - `/about.html` — educational aims and background.
-- `/courses.html` — all 80 named programs and specializations shown directly as individual image cards, grouped by category, with category filters and live search. Hotel management remains an enquiry area because the reference does not name a program.
+- `/courses.html` — all 80 named programs and specializations remain on this page as individual image cards, grouped by category. The page opens on General courses for a calmer first view; select another category, use **All courses**, or search the full catalog. Hotel management remains an enquiry area because the reference does not name a program.
 - `/contact.html` — contact information, map and WhatsApp enquiry form.
 - `/courses/*.html` — one supporting overview page for each of the nine catalog areas, with the verified listings and a category enquiry link.
 

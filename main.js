@@ -68,7 +68,24 @@ function setupCatalog() {
   const clear = $('#clear-search');
   const sections = $$('.catalog-section');
   const filters = $$('.filter');
-  let active = 'all';
+  const groupFromHash = () => {
+    const fragment = window.location.hash.slice(1);
+    let id = fragment;
+    try { id = decodeURIComponent(fragment); } catch { /* Keep an invalid fragment as-is. */ }
+    const target = document.getElementById(id);
+    return target?.closest('.catalog-section')?.dataset.group || 'general';
+  };
+  let active = groupFromHash();
+  const syncFilters = () => filters.forEach((item) => {
+    const selected = item.dataset.filter === active;
+    item.classList.toggle('is-active', selected);
+    item.setAttribute('aria-pressed', String(selected));
+  });
+  const replaceHash = (group) => {
+    const url = new URL(window.location.href);
+    url.hash = group === 'all' ? '' : group;
+    window.history.replaceState(null, '', url);
+  };
   const render = () => {
     const query = input.value.trim().toLocaleLowerCase();
     let count = 0;
@@ -93,17 +110,26 @@ function setupCatalog() {
       section.hidden = sectionCount === 0;
       count += sectionCount;
     });
-    $('#result-count').textContent = `${count} listed ${count === 1 ? 'option' : 'options'} shown${hotelVisible ? ' · Hotel management enquiries available' : ''}`;
+    const resultCount = $('#result-count');
+    resultCount.textContent = `${count} listed ${count === 1 ? 'option' : 'options'} shown${hotelVisible ? ' · Hotel management enquiries available' : ''}`;
+    resultCount.classList.toggle('is-quiet', !query && active !== 'all');
     $('#no-results').hidden = count !== 0 || hotelVisible;
     clear.hidden = !query;
   };
-  input.addEventListener('input', render);
+  input.addEventListener('input', () => {
+    if (input.value.trim()) { active = 'all'; replaceHash(active); }
+    syncFilters();
+    render();
+  });
   clear.addEventListener('click', () => { input.value = ''; input.focus(); render(); });
   filters.forEach((button) => button.addEventListener('click', () => {
     active = button.dataset.filter;
-    filters.forEach((item) => { const selected = item === button; item.classList.toggle('is-active', selected); item.setAttribute('aria-pressed', String(selected)); });
+    syncFilters();
+    replaceHash(active);
     render();
   }));
+  window.addEventListener('hashchange', () => { active = groupFromHash(); syncFilters(); render(); });
+  syncFilters();
   render();
 }
 
