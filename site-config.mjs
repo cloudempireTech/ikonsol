@@ -1,5 +1,6 @@
-/** Public IKONSOL contact details and enquiry destination. */
+/** Public Ikonsol Edutech Pvt. Limited contact details and enquiry destination. */
 export const siteConfig = Object.freeze({
+  siteName: 'Ikonsol Edutech Pvt. Limited',
   phoneDisplay: '+91 8981729353',
   phoneE164: '918981729353',
   whatsappE164: '918981729353',

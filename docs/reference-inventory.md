@@ -58,7 +58,7 @@ Every unique image referenced by the source HTML and its page stylesheet was dow
 
 | Original file | Reference use | New use |
 | --- | --- | --- |
-| `cropped-logo.png` | Header logo | Header/footer logo; source for favicon and touch icon. |
+| `cropped-logo.png` | Header logo with the source site's former name | Replaced in the deployed site by `brand-logo.svg`; its book motif informed the new vector mark. The outdated raster is no longer shipped. |
 | `presentation.png` | Four top-course icons | Preserved source asset; redesigned cards use photographs. |
 | `istockphoto-1272815911-612x612-1.jpg` | Hero background | Optimized as `general-courses.webp` for the General courses card and detail page; supplied video replaces hero imagery. |
 | `Bulk-SMS-Service-for-Coaching-Institutes.jpg` | Council/feature card image | `management.webp`, `about-classroom.webp`. |
@@ -71,7 +71,7 @@ Every unique image referenced by the source HTML and its page stylesheet was dow
 | `pattern-1.png` | Elementor section background | Preserved original. |
 | User-supplied `gemini_generated_video_d5442046.mp4` | Not on reference | `hero.mp4`, H.264 silent fast-start encode; `hero-poster.jpg` extracted at 2 seconds. |
 
-The source did not provide a favicon. `favicon.png` and `apple-touch-icon.png` are cropped from its logo.
+The source did not provide a favicon. The deployed site now uses `brand-mark.svg` and a matching `apple-touch-icon.png`, both without the source site's former name. On 21 October 2026, the user specified **Ikonsol Edutech Pvt. Limited** as the new displayed name. This audit retains the original source headline above so the reference can still be checked accurately.
 
 The October 2026 course-page redesign uses the layout pattern of The Divine services page as a visual reference. Its imagery and content were not copied into IKONSOL. The catalog now shows each named reference entry as its own card with a distinct generated WebP image. The generated scenes are illustrative and do not depict IKONSOL facilities or promise a particular course experience. [`data/course-catalog.json`](../data/course-catalog.json) inventories the 80 entries and the exact asset path for each. The supporting overview pages retain the original IKONSOL photos and plain course tiles without visible list marks.
 

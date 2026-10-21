@@ -1,6 +1,6 @@
-# IKONSOL College of Education
+# Ikonsol Edutech Pvt. Limited
 
-A responsive, framework-free website for IKONSOL College of Education. It uses semantic HTML, CSS and vanilla JavaScript, with Vite only for development and production asset packaging. The site uses IKONSOL branding throughout; CloudEmpire is credited only in the footer.
+A responsive, framework-free website for Ikonsol Edutech Pvt. Limited. It uses semantic HTML, CSS and vanilla JavaScript, with Vite only for development and production asset packaging. The site uses Ikonsol Edutech Pvt. Limited branding throughout; CloudEmpire is credited only in the footer.
 
 Scroll-driven parallax adds depth to the hero media, course imagery, abstract cards and decorative backgrounds throughout the pages. It updates visible elements in one animation frame per scroll, keeps text and controls still, and becomes static under `prefers-reduced-motion` or the `?motion=reduce` QA override.
 
@@ -19,7 +19,7 @@ Open the URL printed by Vite. `npm run build` writes the static site to `dist/`;
 
 The site has 13 directly addressable pages:
 
-- `/` — home, hero video, highlighted course areas, abstract course discovery cards, IKONSOL's stated aims, and a short guide from browsing to enquiry.
+- `/` — home, hero video, highlighted course areas, abstract course discovery cards, Ikonsol Edutech Pvt. Limited's stated aims, and a short guide from browsing to enquiry.
 - `/about.html` — educational aims and background.
 - `/courses.html` — all 80 named programs and specializations shown directly as individual image cards, grouped by category, with category filters and live search. Hotel management remains an enquiry area because the reference does not name a program.
 - `/contact.html` — contact information, map and WhatsApp enquiry form.
@@ -51,4 +51,4 @@ The live GitHub Pages site is [cloudempiretech.github.io/ikonsol](https://cloude
 
 For another static host, run `npm run build` and deploy `dist/`. [`netlify.toml`](netlify.toml) already configures this for Netlify. Vite's relative base allows the build to run under a project subpath. Verify that WhatsApp opens with the configured number and prefilled details; a human must tap **Send** to deliver an enquiry. If the public domain changes, update canonical and social URLs in the HTML, both copies of the sitemap and robots files, and this README.
 
-The reference audit, course and asset inventory, and content uncertainties are in [`docs/reference-inventory.md`](docs/reference-inventory.md). The exact catalog entries and paths to their distinct generated visuals are in [`data/course-catalog.json`](data/course-catalog.json); the image generation prompt set is in [`docs/generated-course-images.md`](docs/generated-course-images.md). Run `node scripts/render-catalog.mjs` after editing the data to refresh the static catalog HTML. The Courses page groups Engineering by Diploma, B.Tech and M.Tech, Management by programs and specializations, and Paramedical by nursing/allied health and pharmacy. Search and category filters hide empty subgroups. All course visuals are illustrative, not photographs of IKONSOL facilities. Source imagery is stored in `assets/` rather than hotlinked. No unsupported enrollment, placement or student statistics are shown.
+The reference audit, course and asset inventory, and content uncertainties are in [`docs/reference-inventory.md`](docs/reference-inventory.md). The exact catalog entries and paths to their distinct generated visuals are in [`data/course-catalog.json`](data/course-catalog.json); the image generation prompt set is in [`docs/generated-course-images.md`](docs/generated-course-images.md). Run `node scripts/render-catalog.mjs` after editing the data to refresh the static catalog HTML. The Courses page groups Engineering by Diploma, B.Tech and M.Tech, Management by programs and specializations, and Paramedical by nursing/allied health and pharmacy. Search and category filters hide empty subgroups. All course visuals are illustrative, not photographs of Ikonsol Edutech Pvt. Limited facilities. Source imagery is stored in `assets/` rather than hotlinked. No unsupported enrollment, placement or student statistics are shown.

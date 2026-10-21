@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-labelledby="title">
+  <title id="title">Ikonsol Edutech Pvt. Limited</title>
+  <rect width="180" height="180" rx="36" fill="#f5f8f2"/>
+  <circle cx="90" cy="90" r="78" fill="#07965c"/>
+  <circle cx="90" cy="90" r="61" fill="#102a3b" stroke="#f5f8f2" stroke-width="4"/>
+  <path d="M90 51v12M66 58l6 10M114 58l-6 10M49 78l11 5M131 78l-11 5" fill="none" stroke="#f6b753" stroke-width="4" stroke-linecap="round"/>
+  <path d="M90 91c-16-10-31-12-47-8v37c17-4 32-1 47 9 15-10 30-13 47-9V83c-16-4-31-2-47 8Z" fill="#f5f8f2" stroke="#f6b753" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M90 91v38M48 88c15-2 28 1 42 11 14-10 27-13 42-11" fill="none" stroke="#1987ba" stroke-width="4" stroke-linecap="round"/>
+</svg>

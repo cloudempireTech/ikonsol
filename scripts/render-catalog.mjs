@@ -43,13 +43,13 @@ const sections = catalog.map(({ key, title, page, entries }) => {
     : `          <div class="detail-grid">\n${entries.map((entry, index) => renderCard({ ...entry, index })).join('\n')}\n          </div>`;
   return `        <section class="catalog-section" id="${key}" data-group="${key}" aria-labelledby="${key}-heading">
           <div class="catalog-section__heading"><div><p class="eyebrow">${entries.length} listed ${entries.length === 1 ? 'option' : 'options'}</p><h3 id="${key}-heading">${escape(title)}</h3><p>${escape(descriptions[key])}</p></div><a class="catalog-section__overview" href="./${page}">About this course area <span aria-hidden="true">↗</span></a></div>
-${cards}${key === 'management' ? '\n          <p class="catalog-section__footnote">Other specializations: contact IKONSOL for details.</p>' : ''}
+${cards}${key === 'management' ? '\n          <p class="catalog-section__footnote">Other specializations: contact Ikonsol Edutech Pvt. Limited for details.</p>' : ''}
         </section>`;
 }).join('\n');
 
 const hotel = `        <section class="catalog-section" id="hotel" data-group="hotel" aria-labelledby="hotel-heading">
-          <div class="catalog-section__heading"><div><p class="eyebrow">Course area</p><h3 id="hotel-heading">Hotel management</h3><p>IKONSOL highlights hotel management without naming individual programs on the reference site.</p></div><a class="catalog-section__overview" href="./courses/hotel-management.html">About this course area <span aria-hidden="true">↗</span></a></div>
-          <div class="catalog-section__notice"><img src="./assets/hotel-management.webp" alt="Hotel reception setting" width="1204" height="800" loading="lazy"><div><h4>Ask about current programs</h4><p>Contact IKONSOL for the latest hotel management options, eligibility and admission details.</p><a class="detail-course__enquire" href="./contact.html?course=Hotel%20management#enquiry-form">Enquire about hotel management <span aria-hidden="true">↗</span></a></div></div>
+          <div class="catalog-section__heading"><div><p class="eyebrow">Course area</p><h3 id="hotel-heading">Hotel management</h3><p>Ikonsol Edutech Pvt. Limited highlights hotel management without naming individual programs on the reference site.</p></div><a class="catalog-section__overview" href="./courses/hotel-management.html">About this course area <span aria-hidden="true">↗</span></a></div>
+          <div class="catalog-section__notice"><img src="./assets/hotel-management.webp" alt="Hotel reception setting" width="1204" height="800" loading="lazy"><div><h4>Ask about current programs</h4><p>Contact Ikonsol Edutech Pvt. Limited for the latest hotel management options, eligibility and admission details.</p><a class="detail-course__enquire" href="./contact.html?course=Hotel%20management#enquiry-form">Enquire about hotel management <span aria-hidden="true">↗</span></a></div></div>
         </section>`;
 const replacement = `      <div class="catalog-list" id="catalog-list">\n${sections}\n${hotel}\n      </div>\n`;
 const pattern = /      <div class="catalog-list" id="catalog-list">[\s\S]*?(?=      <div class="no-results")/;

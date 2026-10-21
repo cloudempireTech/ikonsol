@@ -7,13 +7,13 @@ test('general WhatsApp link targets the verified business number', () => {
   const url = new URL(whatsappUrl());
   assert.equal(url.host, 'wa.me');
   assert.equal(url.pathname, `/${siteConfig.whatsappE164}`);
-  assert.match(url.searchParams.get('text'), /Hello IKONSOL/);
+  assert.match(url.searchParams.get('text'), /Hello Ikonsol Edutech Pvt. Limited/);
 });
 
 test('course enquiry link includes contact details and message', () => {
   const url = new URL(enquiryWhatsappUrl({ name: '  Student Name  ', phone: '+91 90000 00000', email: 'student@example.com', course: 'Engineering', message: '  Please send course details.  ' }));
   assert.equal(url.pathname, `/${siteConfig.whatsappE164}`);
-  assert.equal(url.searchParams.get('text'), 'Hello IKONSOL, I would like to enquire about a course.\nName: Student Name\nCourse of interest: Engineering\nPhone: +91 90000 00000\nEmail: student@example.com\nMessage: Please send course details.');
+  assert.equal(url.searchParams.get('text'), 'Hello Ikonsol Edutech Pvt. Limited, I would like to enquire about a course.\nName: Student Name\nCourse of interest: Engineering\nPhone: +91 90000 00000\nEmail: student@example.com\nMessage: Please send course details.');
 });
 
 test('optional contact fields are omitted from the prefilled message', () => {

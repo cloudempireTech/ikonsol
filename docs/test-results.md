@@ -4,7 +4,7 @@
 
 | Check | Result |
 | --- | --- |
-| Content | General, Computer applications, Law and Certificate cards link to the corresponding catalog anchors. Hotel management points to its enquiry-only overview. IKONSOL mission cards use the reference's stated aims. |
+| Content | General, Computer applications, Law and Certificate cards link to the corresponding catalog anchors. Hotel management points to its enquiry-only overview. Ikonsol Edutech Pvt. Limited mission cards use the reference's stated aims. |
 | Desktop, tablet and mobile | Browser checks at 1440, 768 and 390 px confirm the abstract cards, mission cards and enquiry steps reflow without horizontal overflow. No browser console errors or failed local assets occurred. |
 | Interaction and motion | Computer applications card opens the correct catalog section. Scroll reveal activates for the new cards; `?motion=reduce` removes transitions. The Home page includes a no-JavaScript reveal fallback. |
 | Automated checks | `npm run lint`, `npm test` (7 tests), and `npm run build` pass. |
@@ -45,7 +45,7 @@ The “Explore top courses” section includes a fifth, full-width “View all c
 | Assets and console | Pass: first visible generated cards load at natural width 960; no broken images or console errors in the fresh checked page. Static route tests verify every asset path. |
 | Automated checks | `npm run lint`, `npm test` (6 tests), and `npm run build` pass. |
 
-The image files in `assets/course-images/` are web-optimized illustrative scenes. They are not photographs of IKONSOL facilities. The source content and exact asset mapping are documented in `reference-inventory.md`, `generated-course-images.md`, and `data/course-catalog.json`.
+The image files in `assets/course-images/` are web-optimized illustrative scenes. They are not photographs of Ikonsol Edutech Pvt. Limited facilities. The source content and exact asset mapping are documented in `reference-inventory.md`, `generated-course-images.md`, and `data/course-catalog.json`.
 
 The GitHub Pages workflows for commit `17e8cc0936ef1f51e2b789fcad91d34e2300fddd` completed successfully. On the live `/ikonsol/courses.html` page, all 80 cards and nine sections rendered. The Engineering filter showed 18 entries, `Cyber Security` search showed one, the enquiry URL included the selected category and subject, the checked images loaded, and the browser reported no console errors.
 
@@ -60,7 +60,7 @@ The GitHub Pages workflows for commit `17e8cc0936ef1f51e2b789fcad91d34e2300fddd`
 | Assets and console | Pass: visible card/detail images loaded and no browser console errors appeared in the checked pages. |
 | Automated checks | `npm run lint`, `npm test` (6 tests), and `npm run build` pass. |
 
-The catalog keeps verified subjects in its search index, with the complete listings on the nine detail pages. The photos come from the IKONSOL source asset inventory; The Divine page supplied layout inspiration only.
+The catalog keeps verified subjects in its search index, with the complete listings on the nine detail pages. The photos come from the Ikonsol Edutech Pvt. Limited source asset inventory; The Divine page supplied layout inspiration only.
 
 The GitHub Pages deployment of commit `854a706` succeeded. On the live `/ikonsol/courses.html` page, all nine cards and both stylesheets loaded; the desktop grid had three columns and no horizontal overflow. Live search for `Cyber Security` returned Engineering, and its detail page showed 18 plain course tiles with computed `list-style: none` and no `::before` marker. The checked live pages had no console errors.
 
@@ -92,13 +92,13 @@ The live GitHub Pages deployment for commit `53b34bd` completed successfully. In
 
 ## Browser checks
 
-Tests used the built site served locally with `npm run preview`. The WhatsApp form was tested with sample details; no message was sent to IKONSOL.
+Tests used the built site served locally with `npm run preview`. The WhatsApp form was tested with sample details; no message was sent to Ikonsol Edutech Pvt. Limited.
 
 | Feature | Observed result |
 | --- | --- |
 | Navigation | Home → Courses → Engineering detail → Contact works. The course link preselects Engineering. All four primary navigation routes and nine detail routes exist. |
 | Search and discovery | Searching `Cyber Security` shows one Engineering area; its title opens the dedicated detail page with the verified Diploma, B.Tech and M.Tech listings. |
-| WhatsApp | Header/contact/floating links use `wa.me/918981729353` and an encoded IKONSOL course message. The reference short link redirects to the same number. |
+| WhatsApp | Header/contact/floating links use `wa.me/918981729353` and an encoded Ikonsol Edutech Pvt. Limited course message. The reference short link redirects to the same number. |
 | Enquiry form | Empty submit shows field-specific errors. A valid sample enquiry prepares `wa.me/918981729353` with name, course, phone, and message; the page states that the visitor must tap Send in WhatsApp. A visible Open WhatsApp link remains available. Editing the message clears the prepared link and status. |
 | Hero media | On the final multipage Home, video loaded with `readyState=4`, playing muted and inline, with a 10-second duration and loop enabled. A full loop and desktop/mobile framing were checked in the earlier build; the video asset and hero styling are unchanged. |
 | Reduced motion | On the final Home, `?motion=reduce` hides and pauses the video, removes its source, retains the poster, and displays reveal elements. The CSS also contains a native `prefers-reduced-motion` rule. |
@@ -124,3 +124,7 @@ Tests used the built site served locally with `npm run preview`. The WhatsApp fo
 | Hero playback | At 390 px in Chrome, the hero video loaded and played muted, inline and on loop. |
 
 These checks ran in headless Chrome against the local Vite site. Screen captures of the desktop and mobile hero and a course card were inspected for readable text, intact image framing and clipping. Physical mobile devices were not used.
+
+## Company name update — 21 October 2026
+
+The live site copy, page titles and descriptions, accessibility labels, WhatsApp greeting, logo, favicon, and Apple touch icon now use **Ikonsol Edutech Pvt. Limited**. The source audit retains its original wording as a historical record. Automated checks pass with `npm run lint`, `npm test` (7 tests), and `npm run build`. Browser checks covered all 13 pages at 1440, 768, and 390 px: the new logo and favicon loaded, the previous company name was absent from visible page copy, and no horizontal overflow or console errors appeared. Desktop and mobile header and About screenshots were reviewed. WhatsApp links included the new company name in the prepared message.
