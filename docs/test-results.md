@@ -138,3 +138,7 @@ The catalog opens with General courses selected, while **All courses** still rev
 ## Original logo and favicon restoration — 21 October 2026
 
 The header and footer use the earlier `cropped-logo.png`; browser icons use the earlier `favicon.png` and `apple-touch-icon.png`. These are exact assets from the pre-rebrand repository commit. The artwork itself contains the former company wording; page copy retains **Ikonsol Edutech Pvt. Limited**. All 13 pages were checked for the restored image paths and accessible labels. The static checks and desktop/mobile visual review were repeated after the change.
+
+## Logo wordmark update — 21 October 2026
+
+The header and footer now use `ikonsol-logo.svg`, which embeds the exact original book crest and places the current company name beside it. The previous favicon and Apple touch icon remain in place. The original `cropped-logo.png` is retained as the source asset. The new wordmark was visually checked at desktop and mobile sizes; all page references, image loading, and static checks were verified.

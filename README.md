@@ -2,7 +2,7 @@
 
 A responsive, framework-free website for Ikonsol Edutech Pvt. Limited. It uses semantic HTML, CSS and vanilla JavaScript, with Vite only for development and production asset packaging. Page copy uses the current company name; CloudEmpire is credited only in the footer.
 
-The original IKONSOL logo, favicon and Apple touch icon are used at the user's request. Their artwork contains the former company wording; page titles, copy and contact details use Ikonsol Edutech Pvt. Limited.
+The logo keeps the original IKONSOL crest and displays **Ikonsol Edutech Pvt. Limited** beside it. The earlier favicon and Apple touch icon remain in use; their small crest artwork retains the former wording. Page titles, copy and contact details use the current company name.
 
 Scroll-driven parallax adds depth to the hero media, course imagery, abstract cards and decorative backgrounds throughout the pages. It updates visible elements in one animation frame per scroll, keeps text and controls still, and becomes static under `prefers-reduced-motion` or the `?motion=reduce` QA override.
 

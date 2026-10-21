@@ -22,7 +22,7 @@ test('every page has working relative links, assets, unique metadata and one hea
     const content = readFileSync(resolve(root, page), 'utf8');
     assert.ok(content.includes('Ikonsol Edutech Pvt. Limited'), `${page} uses the current company name`);
     assert.ok(!/IKONSOL College of Education/i.test(content), `${page} omits the former company name`);
-    assert.match(content, /assets\/cropped-logo\.png/, `${page} uses the original logo`);
+    assert.match(content, /assets\/ikonsol-logo\.svg/, `${page} uses the updated original crest`);
     assert.match(content, /assets\/favicon\.png" type="image\/png"/, `${page} uses the original favicon`);
     const pageUrl = new URL(page === 'index.html' ? '' : page, base);
     const title = content.match(/<title>(.*?)<\/title>/)?.[1];
@@ -47,6 +47,14 @@ test('every page has working relative links, assets, unique metadata and one hea
       }
     }
   }
+});
+
+test('the updated logo shows the current company name and retains the source crest', () => {
+  const logo = readFileSync(resolve(root, 'assets/ikonsol-logo.svg'), 'utf8');
+  assert.match(logo, /<title id="logo-title">Ikonsol Edutech Pvt\. Limited<\/title>/);
+  assert.match(logo, /<text[^>]*>Ikonsol<\/text>/);
+  assert.match(logo, /<text[^>]*>Edutech Pvt\. Limited<\/text>/);
+  assert.match(logo, /data:image\/png;base64,/);
 });
 
 test('catalog shows every verified course directly with a distinct image and enquiry', () => {
