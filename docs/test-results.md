@@ -134,3 +134,7 @@ The live site copy, page titles and descriptions, accessibility labels, WhatsApp
 The catalog opens with General courses selected, while **All courses** still reveals every listing on the same page. The existing course names, descriptions, categories, subgroup labels, images and enquiry links were kept. Search automatically spans all categories. A category fragment such as `#law` opens the matching section. The page uses a shorter hero, a compact search and filter panel, and lighter course cards with simpler title typography.
 
 `npm run lint`, `npm test` (7 tests), and `npm run build` pass. Browser checks at 1440, 768, and 390 px confirmed the initial 11 General cards, 18 Engineering cards on selection, all 80 cards via **All courses**, Cyber Security search, Hotel management enquiry, direct category fragments, image loading while scrolling, and no horizontal overflow or console errors. Desktop and mobile screenshots were visually reviewed.
+
+## Original logo and favicon restoration — 21 October 2026
+
+The header and footer use the earlier `cropped-logo.png`; browser icons use the earlier `favicon.png` and `apple-touch-icon.png`. These are exact assets from the pre-rebrand repository commit. The artwork itself contains the former company wording; page copy retains **Ikonsol Edutech Pvt. Limited**. All 13 pages were checked for the restored image paths and accessible labels. The static checks and desktop/mobile visual review were repeated after the change.

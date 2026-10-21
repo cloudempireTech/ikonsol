@@ -22,8 +22,8 @@ test('every page has working relative links, assets, unique metadata and one hea
     const content = readFileSync(resolve(root, page), 'utf8');
     assert.ok(content.includes('Ikonsol Edutech Pvt. Limited'), `${page} uses the current company name`);
     assert.ok(!/IKONSOL College of Education/i.test(content), `${page} omits the former company name`);
-    assert.match(content, /assets\/brand-logo\.svg/, `${page} uses the current logo`);
-    assert.match(content, /assets\/brand-mark\.svg/, `${page} uses the current favicon`);
+    assert.match(content, /assets\/cropped-logo\.png/, `${page} uses the original logo`);
+    assert.match(content, /assets\/favicon\.png" type="image\/png"/, `${page} uses the original favicon`);
     const pageUrl = new URL(page === 'index.html' ? '' : page, base);
     const title = content.match(/<title>(.*?)<\/title>/)?.[1];
     assert.ok(title, `${page} has a title`);
