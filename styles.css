@@ -125,3 +125,10 @@
 :root.motion-reduced .hero__media,:root.motion-reduced .purpose::before,:root.motion-reduced .purpose::after,:root.motion-reduced .next-step__number,:root.motion-reduced .page-hero::before,:root.motion-reduced .contact-banner::before,:root.motion-reduced .footer::before{transform:none}
 :root.motion-reduced .top-card img,:root.motion-reduced .about__visual img{object-position:center}
 :root.motion-reduced .discover-card__art,:root.motion-reduced .discover-card:hover .discover-card__art,:root.motion-reduced .discover-card--computer .discover-card__art,:root.motion-reduced .discover-card--computer:hover .discover-card__art{transform:none}
+
+/* Keep the canonical headline in HTML while softly rotating its visual ending. */
+.hero h1{max-width:920px}
+.hero h1 #hero-phrase{display:inline-block;max-width:100%;transition:opacity .26s ease,transform .26s ease;vertical-align:baseline}
+.hero h1 #hero-phrase.is-changing{opacity:0;transform:translateY(-.16em)}
+@media(prefers-reduced-motion:reduce){.hero h1 #hero-phrase{transition:none}}
+:root.motion-reduced .hero h1 #hero-phrase{transition:none}

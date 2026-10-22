@@ -142,3 +142,7 @@ The header and footer use the earlier `cropped-logo.png`; browser icons use the 
 ## Logo wordmark update — 21 October 2026
 
 The header and footer now use `ikonsol-logo.svg`, which embeds the exact original book crest and places the current company name beside it. The previous favicon and Apple touch icon remain in place. The original `cropped-logo.png` is retained as the source asset. The new wordmark was visually checked at desktop and mobile sizes; all page references, image loading, and static checks were verified.
+
+## Animated Home headline — 22 October 2026
+
+The static HTML contains the canonical H1 “An education that opens new directions.” and course-focused title and description metadata. JavaScript rotates only the highlighted ending through “new pathways” and “new possibilities.” Browser checks at 1440, 768 and 390 px confirmed the full phrase cycle, stable heading height, no horizontal overflow and no console errors. Native `prefers-reduced-motion: reduce` and `?motion=reduce` both kept the original phrase static. Desktop and mobile screenshots of the initial and rotated states were visually reviewed. `npm run lint`, `npm test` (9 tests) and `npm run build` passed.

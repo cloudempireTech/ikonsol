@@ -57,6 +57,13 @@ test('the updated logo shows the current company name and retains the source cre
   assert.match(logo, /data:image\/png;base64,/);
 });
 
+test('home keeps its canonical headline and descriptive search metadata in static HTML', () => {
+  const home = readFileSync(resolve(root, 'index.html'), 'utf8');
+  assert.match(home, /<h1 id="hero-title">An education that opens <em id="hero-phrase">new directions\.<\/em><\/h1>/);
+  assert.match(home, /<title>Ikonsol Edutech Pvt\. Limited \| Education and Courses in Kolkata<\/title>/);
+  assert.match(home, /<meta name="description" content="Explore Ikonsol Edutech Pvt\. Limited courses across engineering/);
+});
+
 test('catalog shows every verified course directly with a distinct image and enquiry', () => {
   const catalog = readFileSync(resolve(root, 'courses.html'), 'utf8');
   const groups = JSON.parse(readFileSync(resolve(root, 'data/course-catalog.json'), 'utf8'));

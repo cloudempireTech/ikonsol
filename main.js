@@ -47,6 +47,40 @@ function setupVideo() {
   video.addEventListener('error', () => { video.hidden = true; });
 }
 
+function setupHeroHeadline() {
+  const phrase = $('#hero-phrase');
+  if (!phrase) return;
+  const phrases = ['new directions.', 'new pathways.', 'new possibilities.'];
+  let index = 0;
+  let nextTimer = 0;
+  let swapTimer = 0;
+  const stop = () => {
+    window.clearTimeout(nextTimer);
+    window.clearTimeout(swapTimer);
+    phrase.classList.remove('is-changing');
+  };
+  const cycle = () => {
+    if (lessMotion() || document.hidden) return;
+    phrase.classList.add('is-changing');
+    swapTimer = window.setTimeout(() => {
+      index = (index + 1) % phrases.length;
+      phrase.textContent = phrases[index];
+      phrase.classList.remove('is-changing');
+      nextTimer = window.setTimeout(cycle, 4000);
+    }, 260);
+  };
+  const sync = () => {
+    stop();
+    if (lessMotion()) {
+      index = 0;
+      phrase.textContent = phrases[0];
+    } else if (!document.hidden) nextTimer = window.setTimeout(cycle, 4000);
+  };
+  reduceMotion.addEventListener('change', sync);
+  document.addEventListener('visibilitychange', sync);
+  sync();
+}
+
 function setupMenu() {
   const button = $('#menu-button');
   const menu = $('#mobile-nav');
@@ -266,6 +300,7 @@ function setupParallax() {
 
 applyContactConfig();
 setupVideo();
+setupHeroHeadline();
 setupMenu();
 setupCatalog();
 setupEnquiry();

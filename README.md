@@ -6,6 +6,8 @@ The logo keeps the original IKONSOL crest and displays **Ikonsol Edutech Pvt. Li
 
 Scroll-driven parallax adds depth to the hero media, course imagery, abstract cards and decorative backgrounds throughout the pages. It updates visible elements in one animation frame per scroll, keeps text and controls still, and becomes static under `prefers-reduced-motion` or the `?motion=reduce` QA override.
 
+The Home headline starts in the HTML as “An education that opens new directions.” The highlighted ending rotates through “new pathways” and “new possibilities” with a short fade. The animation pauses when the tab is hidden and stays on the original phrase when reduced motion is preferred. The static heading and course-focused page title and description remain available to search engines without JavaScript.
+
 ## Start locally
 
 Requires Node.js 20.19+ or 22.12+.
