@@ -51,6 +51,7 @@ function setupHeroHeadline() {
   const phrase = $('#hero-phrase');
   if (!phrase) return;
   const phrases = ['new directions.', 'new pathways.', 'new possibilities.'];
+  const phraseDuration = 2400;
   let index = 0;
   let nextTimer = 0;
   let swapTimer = 0;
@@ -66,7 +67,7 @@ function setupHeroHeadline() {
       index = (index + 1) % phrases.length;
       phrase.textContent = phrases[index];
       phrase.classList.remove('is-changing');
-      nextTimer = window.setTimeout(cycle, 4000);
+      nextTimer = window.setTimeout(cycle, phraseDuration);
     }, 260);
   };
   const sync = () => {
@@ -74,7 +75,7 @@ function setupHeroHeadline() {
     if (lessMotion()) {
       index = 0;
       phrase.textContent = phrases[0];
-    } else if (!document.hidden) nextTimer = window.setTimeout(cycle, 4000);
+    } else if (!document.hidden) nextTimer = window.setTimeout(cycle, phraseDuration);
   };
   reduceMotion.addEventListener('change', sync);
   document.addEventListener('visibilitychange', sync);
